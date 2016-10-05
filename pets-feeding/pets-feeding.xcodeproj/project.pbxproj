@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B603D1DA5444F00CE3647 /* AppDelegate.swift */; };
+		E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B603F1DA5444F00CE3647 /* ViewController.swift */; };
+		E70B60431DA5444F00CE3647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60411DA5444F00CE3647 /* Main.storyboard */; };
+		E70B60481DA5445000CE3647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70B60471DA5445000CE3647 /* Assets.xcassets */; };
+		E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */; };
+		E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60551DA5445000CE3647 /* pets_feedingTests.swift */; };
+		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
+		E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E70B60521DA5445000CE3647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70B60321DA5444F00CE3647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E70B60391DA5444F00CE3647;
+			remoteInfo = "pets-feeding";
+		};
+		E70B605D1DA5445000CE3647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70B60321DA5444F00CE3647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E70B60391DA5444F00CE3647;
+			remoteInfo = "pets-feeding";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E70B603A1DA5444F00CE3647 /* pets-feeding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pets-feeding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70B603D1DA5444F00CE3647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E70B603F1DA5444F00CE3647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E70B60421DA5444F00CE3647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E70B60471DA5445000CE3647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		E70B604A1DA5445000CE3647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E70B604C1DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		E70B60511DA5445000CE3647 /* pets-feedingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pets-feedingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70B60551DA5445000CE3647 /* pets_feedingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingTests.swift; sourceTree = "<group>"; };
+		E70B60571DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70B605C1DA5445000CE3647 /* pets-feedingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pets-feedingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
+		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pets_feeding.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E70B60371DA5444F00CE3647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B604E1DA5445000CE3647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B60591DA5445000CE3647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E70B60311DA5444F00CE3647 = {
+			isa = PBXGroup;
+			children = (
+				E70B603C1DA5444F00CE3647 /* pets-feeding */,
+				E70B60541DA5445000CE3647 /* pets-feedingTests */,
+				E70B605F1DA5445000CE3647 /* pets-feedingUITests */,
+				E70B603B1DA5444F00CE3647 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E70B603B1DA5444F00CE3647 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E70B603A1DA5444F00CE3647 /* pets-feeding.app */,
+				E70B60511DA5445000CE3647 /* pets-feedingTests.xctest */,
+				E70B605C1DA5445000CE3647 /* pets-feedingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E70B603C1DA5444F00CE3647 /* pets-feeding */ = {
+			isa = PBXGroup;
+			children = (
+				E70B603D1DA5444F00CE3647 /* AppDelegate.swift */,
+				E70B606F1DA5453800CE3647 /* Model */,
+				E70B60711DA5453800CE3647 /* View */,
+				E70B60721DA5453800CE3647 /* ViewModel */,
+				E70B60701DA5453800CE3647 /* Source */,
+				E70B606E1DA5453800CE3647 /* Helpers */,
+				E70B603F1DA5444F00CE3647 /* ViewController.swift */,
+				E70B60411DA5444F00CE3647 /* Main.storyboard */,
+			);
+			path = "pets-feeding";
+			sourceTree = "<group>";
+		};
+		E70B60541DA5445000CE3647 /* pets-feedingTests */ = {
+			isa = PBXGroup;
+			children = (
+				E70B60551DA5445000CE3647 /* pets_feedingTests.swift */,
+				E70B60571DA5445000CE3647 /* Info.plist */,
+			);
+			path = "pets-feedingTests";
+			sourceTree = "<group>";
+		};
+		E70B605F1DA5445000CE3647 /* pets-feedingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */,
+				E70B60621DA5445000CE3647 /* Info.plist */,
+			);
+			path = "pets-feedingUITests";
+			sourceTree = "<group>";
+		};
+		E70B606E1DA5453800CE3647 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E70B606F1DA5453800CE3647 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E70B60701DA5453800CE3647 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E70B60471DA5445000CE3647 /* Assets.xcassets */,
+				E70B604C1DA5445000CE3647 /* Info.plist */,
+				E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E70B60711DA5453800CE3647 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70B60721DA5453800CE3647 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E70B60391DA5444F00CE3647 /* pets-feeding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70B60651DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feeding" */;
+			buildPhases = (
+				E70B60361DA5444F00CE3647 /* Sources */,
+				E70B60371DA5444F00CE3647 /* Frameworks */,
+				E70B60381DA5444F00CE3647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pets-feeding";
+			productName = "pets-feeding";
+			productReference = E70B603A1DA5444F00CE3647 /* pets-feeding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E70B60501DA5445000CE3647 /* pets-feedingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70B60681DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feedingTests" */;
+			buildPhases = (
+				E70B604D1DA5445000CE3647 /* Sources */,
+				E70B604E1DA5445000CE3647 /* Frameworks */,
+				E70B604F1DA5445000CE3647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E70B60531DA5445000CE3647 /* PBXTargetDependency */,
+			);
+			name = "pets-feedingTests";
+			productName = "pets-feedingTests";
+			productReference = E70B60511DA5445000CE3647 /* pets-feedingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E70B605B1DA5445000CE3647 /* pets-feedingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70B606B1DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feedingUITests" */;
+			buildPhases = (
+				E70B60581DA5445000CE3647 /* Sources */,
+				E70B60591DA5445000CE3647 /* Frameworks */,
+				E70B605A1DA5445000CE3647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E70B605E1DA5445000CE3647 /* PBXTargetDependency */,
+			);
+			name = "pets-feedingUITests";
+			productName = "pets-feedingUITests";
+			productReference = E70B605C1DA5445000CE3647 /* pets-feedingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E70B60321DA5444F00CE3647 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = mc373;
+				TargetAttributes = {
+					E70B60391DA5444F00CE3647 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					E70B60501DA5445000CE3647 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E70B60391DA5444F00CE3647;
+					};
+					E70B605B1DA5445000CE3647 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E70B60391DA5444F00CE3647;
+					};
+				};
+			};
+			buildConfigurationList = E70B60351DA5444F00CE3647 /* Build configuration list for PBXProject "pets-feeding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E70B60311DA5444F00CE3647;
+			productRefGroup = E70B603B1DA5444F00CE3647 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E70B60391DA5444F00CE3647 /* pets-feeding */,
+				E70B60501DA5445000CE3647 /* pets-feedingTests */,
+				E70B605B1DA5445000CE3647 /* pets-feedingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E70B60381DA5444F00CE3647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */,
+				E70B60481DA5445000CE3647 /* Assets.xcassets in Resources */,
+				E70B60431DA5444F00CE3647 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B604F1DA5445000CE3647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B605A1DA5445000CE3647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E70B60361DA5444F00CE3647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
+				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
+				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B604D1DA5445000CE3647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70B60581DA5445000CE3647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E70B60531DA5445000CE3647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E70B60391DA5444F00CE3647 /* pets-feeding */;
+			targetProxy = E70B60521DA5445000CE3647 /* PBXContainerItemProxy */;
+		};
+		E70B605E1DA5445000CE3647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E70B60391DA5444F00CE3647 /* pets-feeding */;
+			targetProxy = E70B605D1DA5445000CE3647 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E70B60411DA5444F00CE3647 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70B60421DA5444F00CE3647 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70B604A1DA5445000CE3647 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E70B60631DA5445000CE3647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E70B60641DA5445000CE3647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E70B60661DA5445000CE3647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "pets-feeding/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feeding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E70B60671DA5445000CE3647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "pets-feeding/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feeding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E70B60691DA5445000CE3647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "pets-feedingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feedingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pets-feeding.app/pets-feeding";
+			};
+			name = Debug;
+		};
+		E70B606A1DA5445000CE3647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "pets-feedingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feedingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pets-feeding.app/pets-feeding";
+			};
+			name = Release;
+		};
+		E70B606C1DA5445000CE3647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "pets-feedingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feedingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "pets-feeding";
+			};
+			name = Debug;
+		};
+		E70B606D1DA5445000CE3647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "pets-feedingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dementiev-nikolay.pets-feedingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "pets-feeding";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E70B60351DA5444F00CE3647 /* Build configuration list for PBXProject "pets-feeding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70B60631DA5445000CE3647 /* Debug */,
+				E70B60641DA5445000CE3647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70B60651DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feeding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70B60661DA5445000CE3647 /* Debug */,
+				E70B60671DA5445000CE3647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70B60681DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feedingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70B60691DA5445000CE3647 /* Debug */,
+				E70B606A1DA5445000CE3647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70B606B1DA5445000CE3647 /* Build configuration list for PBXNativeTarget "pets-feedingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70B606C1DA5445000CE3647 /* Debug */,
+				E70B606D1DA5445000CE3647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */,
+			);
+			currentVersion = E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */;
+			path = pets_feeding.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E70B60321DA5444F00CE3647 /* Project object */;
+}
