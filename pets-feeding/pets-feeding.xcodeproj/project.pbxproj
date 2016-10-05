@@ -15,6 +15,7 @@
 		E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60551DA5445000CE3647 /* pets_feedingTests.swift */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
 		E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */; };
+		E778DAEE1DA55A1D00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
 		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pets_feeding.xcdatamodel; sourceTree = "<group>"; };
+		E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		E70B60721DA5453800CE3647 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
+				E778DAEE1DA55A1D00BE292D /* StartScreenVC.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
 				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
 			);
