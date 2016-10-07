@@ -89,7 +89,7 @@
         <!--Start ScreenVC-->
         <scene sceneID="5pM-ih-PvU">
             <objects>
-                <viewController id="F6h-Rt-B1d" customClass="StartScreenVC" customModule="pets_feeding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="F6h-Rt-B1d" customClass="StartScreenVC" customModule="pets_feeding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B5A-nL-CJr"/>
                         <viewControllerLayoutGuide type="bottom" id="g8B-Kq-qle"/>
@@ -97,18 +97,53 @@
                     <view key="view" contentMode="scaleToFill" id="xmH-6n-ye1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-TK-fWX">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application needs permission to access your calendar in order to work." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMF-Jy-LFK">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="der-ti-YXc">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Go to Settings"/>
+                                        <connections>
+                                            <action selector="goToSettingsButtonTappedWithSender:" destination="F6h-Rt-B1d" eventType="touchUpInside" id="U4e-Zn-J7J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="5Py-mr-6Vm"/>
+                                    <constraint firstItem="RMF-Jy-LFK" firstAttribute="top" secondItem="FRp-TK-fWX" secondAttribute="top" constant="16" id="IYc-CW-DP9"/>
+                                    <constraint firstAttribute="trailing" secondItem="RMF-Jy-LFK" secondAttribute="trailing" constant="17" id="Vih-iP-gUt"/>
+                                    <constraint firstItem="der-ti-YXc" firstAttribute="centerX" secondItem="FRp-TK-fWX" secondAttribute="centerX" constant="8.5" id="fth-fx-xcg"/>
+                                    <constraint firstItem="RMF-Jy-LFK" firstAttribute="leading" secondItem="FRp-TK-fWX" secondAttribute="leading" constant="16" id="n1a-vD-wkA"/>
+                                    <constraint firstAttribute="bottom" secondItem="der-ti-YXc" secondAttribute="bottom" constant="8" id="zgy-1d-T4y"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FRp-TK-fWX" firstAttribute="centerY" secondItem="xmH-6n-ye1" secondAttribute="centerY" constant="-3.5" id="13m-M4-ofg"/>
+                            <constraint firstItem="FRp-TK-fWX" firstAttribute="leading" secondItem="xmH-6n-ye1" secondAttribute="leading" constant="20" id="7h4-mf-pYa"/>
+                            <constraint firstItem="FRp-TK-fWX" firstAttribute="centerX" secondItem="xmH-6n-ye1" secondAttribute="centerX" constant="3.5" id="I3G-96-BXL"/>
+                            <constraint firstAttribute="trailing" secondItem="FRp-TK-fWX" secondAttribute="trailing" constant="13" id="nZd-SF-I18"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EVI-0V-dSf"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="needPermissionView" destination="FRp-TK-fWX" id="es5-Bp-7it"/>
                         <segue destination="QWh-Bn-Gom" kind="show" identifier="goToMainScreen" animates="NO" id="Se6-qO-vpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSe-1l-z7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-536"/>
+            <point key="canvasLocation" x="373.91304347826087" y="-536.41304347826087"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JEO-C4-FCT">

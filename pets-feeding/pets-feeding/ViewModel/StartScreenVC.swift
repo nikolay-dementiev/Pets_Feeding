@@ -11,22 +11,34 @@ import EventKit
 
 class StartScreenVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	@IBOutlet weak var needPermissionView: UIView!
 
-        // Do any additional setup after loading the view.
-    }
-
-	override func viewWillAppear(_ animated: Bool) {
-		checkCalendarAuthorizationStatus()
+	@IBAction func goToSettingsButtonTapped(sender: UIButton) {
+		let openSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
+		UIApplication.shared.openURL(openSettingsUrl! as URL)
 	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-	func checkCalendarAuthorizationStatus() {
+	internal override func viewDidLoad() {
+		super.viewDidLoad()
+	}
+
+	internal override func viewWillAppear(_ animated: Bool) {
+		checkCalendarAuthorizationStatus()
+		//
+		needPermissionView.alpha = 0
+		navigationController?.setNavigationBarHidden(true, animated: false)
+	}
+
+	internal override func viewWillDisappear(_ animated: Bool) {
+		navigationController?.setNavigationBarHidden(false, animated: true)
+	}
+
+	internal override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+
+	private func checkCalendarAuthorizationStatus() {
 		let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
 
 		switch (status) {
@@ -35,18 +47,19 @@ class StartScreenVC: UIViewController {
 			requestAccessToCalendar()
 		case EKAuthorizationStatus.authorized:
 			// Things are in line with being able to show the calendars in the table view
-//			loadCalendars()
-//			refreshTableView()
-			print ("authorized")
+			self.gotoMainProgrammScreen()
+			//print (status)
 
 		case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
 			// We need to help them give us permission
-			//needPermissionView.fadeIn()
-			print ("restricted or denied")
+			DispatchQueue.main.async(execute: {
+				self.needPermissionView.fadeIn()
+			})
+			//print (status)
 		}
 	}
 
-	func requestAccessToCalendar() {
+	private func requestAccessToCalendar() {
 		let evStore = EKEventStore()
 		evStore.reset()
 		evStore.requestAccess(to: EKEntityType.event, completion: {
@@ -54,30 +67,27 @@ class StartScreenVC: UIViewController {
 
 			if accessGranted == true {
 				DispatchQueue.main.async(execute: {
-//					self.loadCalendars()
-//					self.refreshTableView()
-
-					//performSegue(withIdentifier: "goToMainScreen", sender: nil)
-
-					
-
+					self.gotoMainProgrammScreen()
 				})
 			} else {
 				DispatchQueue.main.async(execute: {
-					//self.needPermissionView.fadeIn()
+					self.needPermissionView.fadeIn()
 				})
 			}
 		})
 	}
 
-    /*
-    // MARK: - Navigation
+	private func gotoMainProgrammScreen() {
+		self.performSegue(withIdentifier: "goToMainScreen", sender: nil)
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	// MARK: - Navigation
 
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "goToMainScreen" {
+			let newVC = segue.destination
+			newVC.navigationItem.setHidesBackButton(true, animated:false)
+		}
+	}
+	
 }
