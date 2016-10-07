@@ -59,7 +59,6 @@ class StartScreenVC: UIViewController {
 
 					//performSegue(withIdentifier: "goToMainScreen", sender: nil)
 
-					
 
 				})
 			} else {
