@@ -58,6 +58,7 @@ class StartScreenVC: UIViewController {
 //					self.refreshTableView()
 
 					//performSegue(withIdentifier: "goToMainScreen", sender: nil)
+					
 
 				})
 			} else {
