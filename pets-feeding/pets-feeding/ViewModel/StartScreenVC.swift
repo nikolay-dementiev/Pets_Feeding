@@ -57,7 +57,7 @@ class StartScreenVC: UIViewController {
 //					self.loadCalendars()
 //					self.refreshTableView()
 
-					performSegue(withIdentifier: "goToMainScreen", sender: nil)
+					//performSegue(withIdentifier: "goToMainScreen", sender: nil)
 
 				})
 			} else {
