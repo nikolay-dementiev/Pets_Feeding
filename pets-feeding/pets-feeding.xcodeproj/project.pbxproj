@@ -15,8 +15,10 @@
 		E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60551DA5445000CE3647 /* pets_feedingTests.swift */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
 		E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */; };
-		E778DAEE1DA55A1D00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */; };
 		E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */; };
+		E778DAF21DABC07400BE292D /* StartScreenVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF11DABC07400BE292D /* StartScreenVCTests.swift */; };
+		E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */; };
+		E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF51DABC9D900BE292D /* StartScreenVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
 		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pets_feeding.xcdatamodel; sourceTree = "<group>"; };
-		E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
 		E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E778DAF11DABC07400BE292D /* StartScreenVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVCTests.swift; sourceTree = "<group>"; };
+		E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
+		E778DAF51DABC9D900BE292D /* StartScreenVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				E70B60551DA5445000CE3647 /* pets_feedingTests.swift */,
+				E778DAF11DABC07400BE292D /* StartScreenVCTests.swift */,
 				E70B60571DA5445000CE3647 /* Info.plist */,
 			);
 			path = "pets-feedingTests";
@@ -162,6 +167,7 @@
 		E70B60711DA5453800CE3647 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +175,7 @@
 		E70B60721DA5453800CE3647 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E778DAED1DA55A1D00BE292D /* StartScreenVC.swift */,
+				E778DAF51DABC9D900BE292D /* StartScreenVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,9 +316,10 @@
 			files = (
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
-				E778DAEE1DA55A1D00BE292D /* StartScreenVC.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
+				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
 				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
+				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */,
+				E778DAF21DABC07400BE292D /* StartScreenVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

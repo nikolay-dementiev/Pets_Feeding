@@ -7,3 +7,29 @@
 //
 
 import Foundation
+import EventKit
+
+struct StartScreenVM {
+
+	
+
+//	func requestAccessToCalendar() {
+//		let evStore = EKEventStore()
+//		evStore.reset()
+//		evStore.requestAccess(to: EKEntityType.event, completion: {
+//			(accessGranted: Bool, error: Error?) in
+//
+//			if accessGranted == true {
+//				DispatchQueue.main.async(execute: {
+//					self.gotoMainProgrammScreen()
+//				})
+//			} else {
+//				DispatchQueue.main.async(execute: {
+//					self.needPermissionView.fadeIn()
+//				})
+//			}
+//		})
+//	}
+
+
+}

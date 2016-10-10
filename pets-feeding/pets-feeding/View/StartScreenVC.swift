@@ -17,10 +17,14 @@ class StartScreenVC: UIViewController {
 		openSettingsScreenOnDevice()
 	}
 
+	private var startScVM: StartScreenVM!
+
 	//MARK: Native Controller's func.
 
 	internal override func viewDidLoad() {
 		super.viewDidLoad()
+
+		startScVM = StartScreenVM()
 	}
 
 	internal override func viewWillAppear(_ animated: Bool) {
