@@ -17,14 +17,13 @@ class StartScreenVC: UIViewController {
 		openSettingsScreenOnDevice()
 	}
 
-	private var startScVM: StartScreenVM!
+	var viewModel: StartScreenVM!
 
 	//MARK: Native Controller's func.
 
 	internal override func viewDidLoad() {
 		super.viewDidLoad()
 
-		startScVM = StartScreenVM()
 	}
 
 	internal override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +42,10 @@ class StartScreenVC: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+	}
+	
 	// MARK: - BL-function
 	//BL = Business Logic
 

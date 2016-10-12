@@ -11,8 +11,6 @@ import EventKit
 
 struct StartScreenVM {
 
-	
-
 //	func requestAccessToCalendar() {
 //		let evStore = EKEventStore()
 //		evStore.reset()
@@ -30,6 +28,5 @@ struct StartScreenVM {
 //			}
 //		})
 //	}
-
 
 }

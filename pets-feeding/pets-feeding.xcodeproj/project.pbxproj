@@ -19,6 +19,7 @@
 		E778DAF21DABC07400BE292D /* StartScreenVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF11DABC07400BE292D /* StartScreenVCTests.swift */; };
 		E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */; };
 		E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF51DABC9D900BE292D /* StartScreenVM.swift */; };
+		E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF71DAE8DEB00BE292D /* StartPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E778DAF11DABC07400BE292D /* StartScreenVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVCTests.swift; sourceTree = "<group>"; };
 		E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
 		E778DAF51DABC9D900BE292D /* StartScreenVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVM.swift; sourceTree = "<group>"; };
+		E778DAF71DAE8DEB00BE292D /* StartPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
+				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
+				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
 				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
 			);
@@ -473,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "pets-feeding/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "pets-feeding/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
