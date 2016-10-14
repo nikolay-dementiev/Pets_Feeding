@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EventKit
+//import EventKit
 
 class StartScreenVC: UIViewController {
 
@@ -45,7 +45,7 @@ class StartScreenVC: UIViewController {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
-	
+
 	// MARK: - Business Logic
 
 	private func openSettingsScreenOnDevice() {
@@ -54,44 +54,60 @@ class StartScreenVC: UIViewController {
 	}
 
 
+	//	private func checkCalendarAuthorizationStatus() {
+	//		let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+	//
+	//		switch (status) {
+	//		case EKAuthorizationStatus.notDetermined:
+	//			// This happens on first-run
+	//			requestAccessToCalendar()
+	//		case EKAuthorizationStatus.authorized:
+	//			// Things are in line with being able to show the calendars in the table view
+	//			self.gotoMainProgrammScreen()
+	//			//print (status)
+	//
+	//		case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
+	//			// We need to help them give us permission
+	//			DispatchQueue.main.async(execute: {
+	//				self.needPermissionView.fadeIn()
+	//			})
+	//			//print (status)
+	//		}
+	//	}
 	private func checkCalendarAuthorizationStatus() {
-		let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+
+		let status = viewModel.getCalendarStatus()
 
 		switch (status) {
-		case EKAuthorizationStatus.notDetermined:
-			// This happens on first-run
-			requestAccessToCalendar()
-		case EKAuthorizationStatus.authorized:
-			// Things are in line with being able to show the calendars in the table view
+		case .accessGranted:
 			self.gotoMainProgrammScreen()
-			//print (status)
-
-		case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
-			// We need to help them give us permission
+		case .accessDenied:
 			DispatchQueue.main.async(execute: {
 				self.needPermissionView.fadeIn()
 			})
-			//print (status)
+		default:
+			print ("Error in \"StartScreenVC.checkCalendarAuthorizationStatus\": access is Uncertain !!")
 		}
 	}
 
-	private func requestAccessToCalendar() {
-		let evStore = EKEventStore()
-		evStore.reset()
-		evStore.requestAccess(to: EKEntityType.event, completion: {
-			(accessGranted: Bool, error: Error?) in
 
-			if accessGranted == true {
-				DispatchQueue.main.async(execute: {
-					self.gotoMainProgrammScreen()
-				})
-			} else {
-				DispatchQueue.main.async(execute: {
-					self.needPermissionView.fadeIn()
-				})
-			}
-		})
-	}
+//	private func requestAccessToCalendar() {
+//		let evStore = EKEventStore()
+//		evStore.reset()
+//		evStore.requestAccess(to: EKEntityType.event, completion: {
+//			(accessGranted: Bool, error: Error?) in
+//
+//			if accessGranted == true {
+//				DispatchQueue.main.async(execute: {
+//					self.gotoMainProgrammScreen()
+//				})
+//			} else {
+//				DispatchQueue.main.async(execute: {
+//					self.needPermissionView.fadeIn()
+//				})
+//			}
+//		})
+//	}
 
 
 	// MARK: Navigation

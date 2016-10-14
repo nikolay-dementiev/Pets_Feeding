@@ -14,6 +14,7 @@ class MainTabBarVC: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//			tabBar.frame.size.height = 10
     }
 
     override func didReceiveMemoryWarning() {
