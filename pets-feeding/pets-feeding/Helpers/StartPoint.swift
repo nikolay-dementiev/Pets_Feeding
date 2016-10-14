@@ -17,7 +17,9 @@ struct StartPoint {
 			let initialViewController = storyboard.instantiateViewController(withIdentifier: "StartScreenVC") as! StartScreenVC
 			initialViewController.viewModel = StartScreenVM()
 
-			appWindow.rootViewController = initialViewController
+			let nav = UINavigationController(rootViewController: initialViewController)
+
+			appWindow.rootViewController = nav
 			appWindow.makeKeyAndVisible()
 
 		} else {

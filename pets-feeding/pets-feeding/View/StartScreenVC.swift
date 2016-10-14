@@ -19,7 +19,7 @@ class StartScreenVC: UIViewController {
 
 	var viewModel: StartScreenVM!
 
-	//MARK: Native Controller's func.
+	//MARK: - Native Controller's
 
 	internal override func viewDidLoad() {
 		super.viewDidLoad()
@@ -46,8 +46,7 @@ class StartScreenVC: UIViewController {
 		super.init(coder: aDecoder)
 	}
 	
-	// MARK: - BL-function
-	//BL = Business Logic
+	// MARK: - Business Logic
 
 	private func openSettingsScreenOnDevice() {
 		let openSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
@@ -94,11 +93,12 @@ class StartScreenVC: UIViewController {
 		})
 	}
 
+
+	// MARK: Navigation
+
 	private func gotoMainProgrammScreen() {
 		self.performSegue(withIdentifier: "goToMainScreen", sender: nil)
 	}
-
-	// MARK: - Navigation
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "goToMainScreen" {

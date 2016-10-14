@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7057FF41DAFC0B100275683 /* MainScreenVM.swift */; };
+		E7057FF71DAFC0F700275683 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7057FF61DAFC0F700275683 /* MainScreenVC.swift */; };
+		E7057FF91DB0F54300275683 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7057FF81DB0F54300275683 /* MainTabBarVC.swift */; };
+		E7057FFB1DB103FD00275683 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7057FFA1DB103FD00275683 /* MainTableVC.swift */; };
 		E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B603D1DA5444F00CE3647 /* AppDelegate.swift */; };
 		E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B603F1DA5444F00CE3647 /* ViewController.swift */; };
 		E70B60431DA5444F00CE3647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60411DA5444F00CE3647 /* Main.storyboard */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7057FF41DAFC0B100275683 /* MainScreenVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		E7057FF61DAFC0F700275683 /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		E7057FF81DB0F54300275683 /* MainTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		E7057FFA1DB103FD00275683 /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		E70B603A1DA5444F00CE3647 /* pets-feeding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pets-feeding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70B603D1DA5444F00CE3647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E70B603F1DA5444F00CE3647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,8 +151,8 @@
 		E70B606E1DA5453800CE3647 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
 				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
+				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */,
+				E7057FF61DAFC0F700275683 /* MainScreenVC.swift */,
+				E7057FF81DB0F54300275683 /* MainTabBarVC.swift */,
+				E7057FFA1DB103FD00275683 /* MainTableVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E778DAF51DABC9D900BE292D /* StartScreenVM.swift */,
+				E7057FF41DAFC0B100275683 /* MainScreenVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,11 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7057FF71DAFC0F700275683 /* MainScreenVC.swift in Sources */,
+				E7057FF91DB0F54300275683 /* MainTabBarVC.swift in Sources */,
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
+				E7057FFB1DB103FD00275683 /* MainTableVC.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
 				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
+				E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */,
 				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
 			);
