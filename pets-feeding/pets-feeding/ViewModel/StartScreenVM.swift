@@ -19,41 +19,40 @@ struct StartScreenVM {
 	}
 
 
-	func getCalendarStatus() -> calendarChekStatusInterlayer {
+	func getCalendarStatus(completion: @escaping CompletionHandler) {
 
 		let status = gettingStatusFromCalendar()
 
-		let valueForReturn = gettingCalendarStatusInterlayer(status)
-
-		return valueForReturn
+		gettingCalendarStatusInterlayer(status, completion: {value in
+			completion(value)
+		})
 	}
 
-	internal func gettingStatusFromCalendar() -> EKAuthorizationStatus{
+	internal func gettingStatusFromCalendar() -> EKAuthorizationStatus {
 		return EKEventStore.authorizationStatus(for: EKEntityType.event)
 	}
 
-	internal func gettingCalendarStatusInterlayer (_ status: EKAuthorizationStatus) -> calendarChekStatusInterlayer {
-		var valueForReturn:calendarChekStatusInterlayer = .accessDeterminingError
+	internal func gettingCalendarStatusInterlayer (_ status: EKAuthorizationStatus, completion: @escaping CompletionHandler) {
 
 		switch (status) {
 		case EKAuthorizationStatus.notDetermined:
 			// This happens on first-run
 
-		valueForReturn = requestAccessToCalendar(.accessUncertain)
+			requestAccessToCalendar(.accessUncertain, completion: {value in
+				completion(value)
+			})
 
 		case EKAuthorizationStatus.authorized:
 			// Things are in line with being able to show the calendars in the table view
-			valueForReturn = .accessGranted
+			completion(.accessGranted)
 		case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
-			valueForReturn = .accessDenied
+			completion(.accessDenied)
 		}
-
-		return valueForReturn
 	}
 
-	internal func requestAccessToCalendar(_ defValue: calendarChekStatusInterlayer) -> calendarChekStatusInterlayer {
+	typealias CompletionHandler = (_ status: calendarChekStatusInterlayer) -> Void
 
-		var value = defValue
+	internal func requestAccessToCalendar(_ defValue: calendarChekStatusInterlayer, completion: @escaping CompletionHandler) {
 
 		let evStore = EKEventStore()
 		evStore.reset()
@@ -61,10 +60,10 @@ struct StartScreenVM {
 			evStore.requestAccess(to: EKEntityType.event, completion: {
 				(accessGranted: Bool, error: Error?) in
 
-				value = self.testAccessToCalendar(access: accessGranted)
-			})
+				let value = self.testAccessToCalendar(access: accessGranted)
 
-		return value
+				completion(value)
+			})
 	}
 
 	internal func testAccessToCalendar(access: Bool) -> calendarChekStatusInterlayer {

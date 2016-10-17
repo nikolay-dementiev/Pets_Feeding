@@ -76,18 +76,20 @@ class StartScreenVC: UIViewController {
 	//	}
 	private func checkCalendarAuthorizationStatus() {
 
-		let status = viewModel.getCalendarStatus()
+		viewModel.getCalendarStatus(completion: { status in
+			switch (status) {
+			case .accessGranted:
+				self.gotoMainProgrammScreen()
+			case .accessDenied:
+				DispatchQueue.main.async(execute: {
+					self.needPermissionView.fadeIn()
+				})
+			default:
+				print ("Error in \"StartScreenVC.checkCalendarAuthorizationStatus\": access is Uncertain !!")
+			}
 
-		switch (status) {
-		case .accessGranted:
-			self.gotoMainProgrammScreen()
-		case .accessDenied:
-			DispatchQueue.main.async(execute: {
-				self.needPermissionView.fadeIn()
-			})
-		default:
-			print ("Error in \"StartScreenVC.checkCalendarAuthorizationStatus\": access is Uncertain !!")
-		}
+		})
+
 	}
 
 
