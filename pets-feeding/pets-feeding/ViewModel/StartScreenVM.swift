@@ -39,7 +39,8 @@ struct StartScreenVM {
 		case EKAuthorizationStatus.notDetermined:
 			// This happens on first-run
 
-			valueForReturn = requestAccessToCalendar(.accessUncertain)
+		valueForReturn = requestAccessToCalendar(.accessUncertain)
+
 		case EKAuthorizationStatus.authorized:
 			// Things are in line with being able to show the calendars in the table view
 			valueForReturn = .accessGranted
@@ -56,11 +57,12 @@ struct StartScreenVM {
 
 		let evStore = EKEventStore()
 		evStore.reset()
-		evStore.requestAccess(to: EKEntityType.event, completion: {
-			(accessGranted: Bool, error: Error?) in
 
-			value = self.testAccessToCalendar(access: accessGranted)
-		})
+			evStore.requestAccess(to: EKEntityType.event, completion: {
+				(accessGranted: Bool, error: Error?) in
+
+				value = self.testAccessToCalendar(access: accessGranted)
+			})
 
 		return value
 	}

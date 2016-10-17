@@ -16,7 +16,6 @@
 		E70B60431DA5444F00CE3647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60411DA5444F00CE3647 /* Main.storyboard */; };
 		E70B60481DA5445000CE3647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70B60471DA5445000CE3647 /* Assets.xcassets */; };
 		E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */; };
-		E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60551DA5445000CE3647 /* pets_feedingTests.swift */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
 		E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */; };
 		E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */; };
@@ -56,7 +55,6 @@
 		E70B604A1DA5445000CE3647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E70B604C1DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		E70B60511DA5445000CE3647 /* pets-feedingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pets-feedingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E70B60551DA5445000CE3647 /* pets_feedingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingTests.swift; sourceTree = "<group>"; };
 		E70B60571DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70B605C1DA5445000CE3647 /* pets-feedingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pets-feedingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		E70B60541DA5445000CE3647 /* pets-feedingTests */ = {
 			isa = PBXGroup;
 			children = (
-				E70B60551DA5445000CE3647 /* pets_feedingTests.swift */,
 				E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */,
 				E70B60571DA5445000CE3647 /* Info.plist */,
 			);
@@ -347,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70B60561DA5445000CE3647 /* pets_feedingTests.swift in Sources */,
 				E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
