@@ -5,8 +5,9 @@
         <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDatePetsDetails" inverseEntity="RecordsTimeDate" syncable="YES"/>
     </entity>
     <entity name="Photo" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" attributeType="String" minValueString="36" maxValueString="36" defaultValueString="00000000-0000-0000-0000-000000000000" indexed="YES" syncable="YES"/>
-        <attribute name="photo" optional="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
         <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="petPhoto" inverseEntity="UsedInAppPets" syncable="YES"/>
         <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDatePhoto" inverseEntity="RecordsTimeDate" syncable="YES"/>
     </entity>
@@ -15,7 +16,22 @@
         <attribute name="update_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="timeDatePetsDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="timeDate" inverseEntity="PetDetails" syncable="YES"/>
         <relationship name="timeDatePhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="timeDate" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="timeDateRS" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReminderSet" inverseName="timeDate" inverseEntity="ReminderSet" syncable="YES"/>
+        <relationship name="timeDateRSTPD" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RSTimesPerDay" inverseName="timeDate" inverseEntity="RSTimesPerDay" syncable="YES"/>
         <relationship name="timeDateUIAP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="timeDate" inverseEntity="UsedInAppPets" syncable="YES"/>
+    </entity>
+    <entity name="ReminderSet" syncable="YES">
+        <attribute name="active" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rmTimesPerDay" optional="YES" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="petRS" inverseEntity="UsedInAppPets" syncable="YES"/>
+        <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDateRS" inverseEntity="RecordsTimeDate" syncable="YES"/>
+    </entity>
+    <entity name="RSTimesPerDay" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" minValueString="36" maxValueString="36" defaultValueString="00000000-0000-0000-0000-000000000000" indexed="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDateRSTPD" inverseEntity="RecordsTimeDate" syncable="YES"/>
     </entity>
     <entity name="UsedInAppPets" syncable="YES">
         <attribute name="activ" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
@@ -24,12 +40,15 @@
         <attribute name="name" optional="YES" attributeType="String" maxValueString="100" defaultValueString="???" syncable="YES"/>
         <relationship name="petDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="pet" inverseEntity="PetDetails" syncable="YES"/>
         <relationship name="petPhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="pet" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="petRS" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReminderSet" inverseName="pet" inverseEntity="ReminderSet" syncable="YES"/>
         <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDateUIAP" inverseEntity="RecordsTimeDate" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UsedInAppPets" positionX="-63" positionY="-18" width="135" height="148"/>
-        <element name="RecordsTimeDate" positionX="-288" positionY="162" width="128" height="118"/>
         <element name="PetDetails" positionX="-63" positionY="194" width="128" height="73"/>
-        <element name="Photo" positionX="-144" positionY="135" width="128" height="105"/>
+        <element name="Photo" positionX="-144" positionY="135" width="128" height="120"/>
+        <element name="RecordsTimeDate" positionX="-288" positionY="162" width="128" height="150"/>
+        <element name="ReminderSet" positionX="-135" positionY="153" width="128" height="105"/>
+        <element name="UsedInAppPets" positionX="-63" positionY="-18" width="135" height="163"/>
+        <element name="RSTimesPerDay" positionX="-171" positionY="126" width="128" height="120"/>
     </elements>
 </model>
