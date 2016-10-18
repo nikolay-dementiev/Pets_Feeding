@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PetDetails" syncable="YES">
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="petDetails" inverseEntity="UsedInAppPets" syncable="YES"/>
+        <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDatePetsDetails" inverseEntity="RecordsTimeDate" syncable="YES"/>
+    </entity>
+    <entity name="Photo" syncable="YES">
+        <attribute name="id" attributeType="String" minValueString="36" maxValueString="36" defaultValueString="00000000-0000-0000-0000-000000000000" indexed="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="petPhoto" inverseEntity="UsedInAppPets" syncable="YES"/>
+        <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDatePhoto" inverseEntity="RecordsTimeDate" syncable="YES"/>
+    </entity>
+    <entity name="RecordsTimeDate" syncable="YES">
+        <attribute name="create_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="update_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="timeDatePetsDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="timeDate" inverseEntity="PetDetails" syncable="YES"/>
+        <relationship name="timeDatePhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="timeDate" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="timeDateUIAP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="timeDate" inverseEntity="UsedInAppPets" syncable="YES"/>
+    </entity>
+    <entity name="UsedInAppPets" syncable="YES">
+        <attribute name="activ" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <attribute name="id" attributeType="String" minValueString="36" maxValueString="36" defaultValueString="00000000-0000-0000-0000-000000000000" indexed="YES" syncable="YES"/>
+        <attribute name="id_table" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" maxValueString="100" defaultValueString="???" syncable="YES"/>
+        <relationship name="petDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="pet" inverseEntity="PetDetails" syncable="YES"/>
+        <relationship name="petPhoto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="pet" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="timeDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecordsTimeDate" inverseName="timeDateUIAP" inverseEntity="RecordsTimeDate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UsedInAppPets" positionX="-63" positionY="-18" width="135" height="148"/>
+        <element name="RecordsTimeDate" positionX="-288" positionY="162" width="128" height="118"/>
+        <element name="PetDetails" positionX="-63" positionY="194" width="128" height="73"/>
+        <element name="Photo" positionX="-144" positionY="135" width="128" height="105"/>
+    </elements>
 </model>
