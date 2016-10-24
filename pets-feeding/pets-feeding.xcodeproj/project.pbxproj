@@ -17,7 +17,15 @@
 		E70B60481DA5445000CE3647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70B60471DA5445000CE3647 /* Assets.xcassets */; };
 		E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
-		E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */; };
+		E723A7DF1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */; };
+		E723A8041DB7BEBC0082FAF6 /* PetDetails+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */; };
+		E723A8051DB7BEBC0082FAF6 /* Photo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */; };
+		E723A8061DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */; };
+		E723A8071DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */; };
+		E723A8081DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */; };
+		E723A8091DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */; };
+		E723A80C1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */; };
+		E723A80E1DB7CE310082FAF6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A80D1DB7CE310082FAF6 /* DataController.swift */; };
 		E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */; };
 		E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */; };
 		E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */; };
@@ -59,7 +67,15 @@
 		E70B605C1DA5445000CE3647 /* pets-feedingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pets-feedingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
 		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pets_feeding.xcdatamodel; sourceTree = "<group>"; };
+		E723A7DE1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetsFeeding.xcdatamodel; sourceTree = "<group>"; };
+		E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PetDetails+CoreData.swift"; sourceTree = "<group>"; };
+		E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreData.swift"; sourceTree = "<group>"; };
+		E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordsTimeDate+CoreData.swift"; sourceTree = "<group>"; };
+		E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersAppStack+CoreData.swift"; sourceTree = "<group>"; };
+		E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderSet+CoreData.swift"; sourceTree = "<group>"; };
+		E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSTimesPerDay+CoreData.swift"; sourceTree = "<group>"; };
+		E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreData.swift"; sourceTree = "<group>"; };
+		E723A80D1DB7CE310082FAF6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVMTests.swift; sourceTree = "<group>"; };
 		E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
@@ -157,7 +173,7 @@
 		E70B606F1DA5453800CE3647 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */,
+				E723A7DC1DB7BA290082FAF6 /* CoreDataEntities */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +206,30 @@
 				E7057FF41DAFC0B100275683 /* MainScreenVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E723A7DC1DB7BA290082FAF6 /* CoreDataEntities */ = {
+			isa = PBXGroup;
+			children = (
+				E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */,
+				E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */,
+				E723A80D1DB7CE310082FAF6 /* DataController.swift */,
+			);
+			path = CoreDataEntities;
+			sourceTree = "<group>";
+		};
+		E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */ = {
+			isa = PBXGroup;
+			children = (
+				E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */,
+				E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */,
+				E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */,
+				E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */,
+				E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */,
+				E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */,
+				E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */,
+			);
+			path = "ManagedObject+Properties";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,17 +366,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E723A8051DB7BEBC0082FAF6 /* Photo+CoreData.swift in Sources */,
 				E7057FF71DAFC0F700275683 /* MainScreenVC.swift in Sources */,
 				E7057FF91DB0F54300275683 /* MainTabBarVC.swift in Sources */,
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
+				E723A8081DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift in Sources */,
+				E723A80C1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift in Sources */,
+				E723A8071DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift in Sources */,
 				E7057FFB1DB103FD00275683 /* MainTableVC.swift in Sources */,
+				E723A8041DB7BEBC0082FAF6 /* PetDetails+CoreData.swift in Sources */,
+				E723A80E1DB7CE310082FAF6 /* DataController.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
+				E723A7DF1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodeld in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
 				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
 				E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */,
-				E70B60751DA545AE00CE3647 /* pets_feeding.xcdatamodeld in Sources */,
+				E723A8061DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
+				E723A8091DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,13 +657,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E70B60731DA545AE00CE3647 /* pets_feeding.xcdatamodeld */ = {
+		E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */,
+				E723A7DE1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodel */,
 			);
-			currentVersion = E70B60741DA545AE00CE3647 /* pets_feeding.xcdatamodel */;
-			path = pets_feeding.xcdatamodeld;
+			currentVersion = E723A7DE1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodel */;
+			path = PetsFeeding.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
