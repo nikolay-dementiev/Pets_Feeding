@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="PetDetails" representedClassName=".PetDetails" syncable="YES">
-        <attribute name="create_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="update_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsedInAppPets" inverseName="petDetails" inverseEntity="UsedInAppPets" syncable="YES"/>
-        <relationship name="petRS" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReminderSet" inverseName="petDetail" inverseEntity="ReminderSet" syncable="YES"/>
-        <relationship name="photo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="photoDetail" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="petRS" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ReminderSet" inverseName="petDetail" inverseEntity="ReminderSet" syncable="YES"/>
+        <relationship name="photo" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="photoDetail" inverseEntity="Photo" syncable="YES"/>
     </entity>
     <entity name="Photo" representedClassName=".Photo" syncable="YES">
-        <attribute name="create_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
         <attribute name="photoCategory" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="update_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="photoDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="photo" inverseEntity="PetDetails" syncable="YES"/>
     </entity>
     <entity name="RemindersAppStack" representedClassName=".RemindersAppStack" syncable="YES">
@@ -28,7 +28,7 @@
         <attribute name="createTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="petDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="petRS" inverseEntity="PetDetails" syncable="YES"/>
-        <relationship name="reminder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSTimesPerDay" inverseName="reminderSet" inverseEntity="RSTimesPerDay" syncable="YES"/>
+        <relationship name="reminder" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSTimesPerDay" inverseName="reminderSet" inverseEntity="RSTimesPerDay" syncable="YES"/>
     </entity>
     <entity name="RSTimesPerDay" representedClassName=".RSTimesPerDay" syncable="YES">
         <attribute name="active" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
@@ -43,8 +43,8 @@
         <attribute name="createTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" maxValueString="100" defaultValueString="???" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="petDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PetDetails" inverseName="pet" inverseEntity="PetDetails" syncable="YES"/>
-        <relationship name="petsRemAppStack" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RemindersAppStack" inverseName="pet" inverseEntity="RemindersAppStack" syncable="YES"/>
+        <relationship name="petDetails" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PetDetails" inverseName="pet" inverseEntity="PetDetails" syncable="YES"/>
+        <relationship name="petsRemAppStack" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RemindersAppStack" inverseName="pet" inverseEntity="RemindersAppStack" syncable="YES"/>
     </entity>
     <elements>
         <element name="PetDetails" positionX="-164" positionY="-180" width="128" height="120"/>
