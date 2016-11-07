@@ -2,16 +2,13 @@
 //  ReminderSet+CoreDataProperties.swift
 //  pets-feeding
 //
-//  Created by Nikolay Dementiev on 19.10.16.
+//  Created by Nikolay Dementiev on 07.11.16.
 //  Copyright © 2016 mc373. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-public class ReminderSet: NSManagedObject {
-
-}
 
 extension ReminderSet {
 
@@ -20,10 +17,10 @@ extension ReminderSet {
     }
 
     @NSManaged public var active: NSNumber?
-    @NSManaged public var rmTimesPerDay: NSDate?
-    @NSManaged public var pet: UsedInAppPets?
+    @NSManaged public var createTime: NSDate?
+    @NSManaged public var updateTime: NSDate?
+    @NSManaged public var petDetail: PetDetails?
     @NSManaged public var reminder: NSSet?
-    @NSManaged public var timeDate: RecordsTimeDate?
 
 }
 

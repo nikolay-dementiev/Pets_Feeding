@@ -18,19 +18,27 @@
 		E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
 		E723A7DF1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */; };
-		E723A8041DB7BEBC0082FAF6 /* PetDetails+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */; };
-		E723A8051DB7BEBC0082FAF6 /* Photo+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */; };
-		E723A8061DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */; };
-		E723A8071DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */; };
-		E723A8081DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */; };
-		E723A8091DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */; };
-		E723A80C1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */; };
-		E723A80E1DB7CE310082FAF6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E723A80D1DB7CE310082FAF6 /* DataController.swift */; };
 		E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */; };
 		E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */; };
 		E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */; };
 		E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF51DABC9D900BE292D /* StartScreenVM.swift */; };
 		E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF71DAE8DEB00BE292D /* StartPoint.swift */; };
+		E7B9E7F61DD09E25008D4C58 /* PetDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7EA1DD09E25008D4C58 /* PetDetails+CoreDataClass.swift */; };
+		E7B9E7F71DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */; };
+		E7B9E7F81DD09E25008D4C58 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7EC1DD09E25008D4C58 /* Photo+CoreDataClass.swift */; };
+		E7B9E7F91DD09E25008D4C58 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7ED1DD09E25008D4C58 /* Photo+CoreDataProperties.swift */; };
+		E7B9E7FA1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7EE1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift */; };
+		E7B9E7FB1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7EF1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift */; };
+		E7B9E7FC1DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F01DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift */; };
+		E7B9E7FD1DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F11DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift */; };
+		E7B9E7FE1DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F21DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift */; };
+		E7B9E7FF1DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */; };
+		E7B9E8001DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */; };
+		E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */; };
+		E7B9E8031DD0A1AC008D4C58 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */; };
+		E7B9E8071DD0B10C008D4C58 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */; };
+		E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */; };
+		E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,19 +76,27 @@
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
 		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E723A7DE1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetsFeeding.xcdatamodel; sourceTree = "<group>"; };
-		E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PetDetails+CoreData.swift"; sourceTree = "<group>"; };
-		E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreData.swift"; sourceTree = "<group>"; };
-		E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordsTimeDate+CoreData.swift"; sourceTree = "<group>"; };
-		E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersAppStack+CoreData.swift"; sourceTree = "<group>"; };
-		E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderSet+CoreData.swift"; sourceTree = "<group>"; };
-		E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSTimesPerDay+CoreData.swift"; sourceTree = "<group>"; };
-		E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreData.swift"; sourceTree = "<group>"; };
-		E723A80D1DB7CE310082FAF6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVMTests.swift; sourceTree = "<group>"; };
 		E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
 		E778DAF51DABC9D900BE292D /* StartScreenVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVM.swift; sourceTree = "<group>"; };
 		E778DAF71DAE8DEB00BE292D /* StartPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPoint.swift; sourceTree = "<group>"; };
+		E7B9E7EA1DD09E25008D4C58 /* PetDetails+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PetDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PetDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E7EC1DD09E25008D4C58 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7ED1DD09E25008D4C58 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E7EE1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersAppStack+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7EF1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemindersAppStack+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E7F01DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7F11DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReminderSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E7F21DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSTimesPerDay+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSTimesPerDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
+		E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPurpose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +162,7 @@
 		E70B60541DA5445000CE3647 /* pets-feedingTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */,
 				E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */,
 				E70B60571DA5445000CE3647 /* Info.plist */,
 			);
@@ -166,6 +183,7 @@
 			children = (
 				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
 				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
+				E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +220,7 @@
 		E70B60721DA5453800CE3647 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E7B9E8081DD0B1F2008D4C58 /* CoreData */,
 				E778DAF51DABC9D900BE292D /* StartScreenVM.swift */,
 				E7057FF41DAFC0B100275683 /* MainScreenVM.swift */,
 			);
@@ -213,7 +232,7 @@
 			children = (
 				E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */,
 				E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */,
-				E723A80D1DB7CE310082FAF6 /* DataController.swift */,
+				E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */,
 			);
 			path = CoreDataEntities;
 			sourceTree = "<group>";
@@ -221,15 +240,28 @@
 		E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */ = {
 			isa = PBXGroup;
 			children = (
-				E723A80B1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift */,
-				E723A7FD1DB7BEBC0082FAF6 /* PetDetails+CoreData.swift */,
-				E723A7FE1DB7BEBC0082FAF6 /* Photo+CoreData.swift */,
-				E723A7FF1DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift */,
-				E723A8001DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift */,
-				E723A8011DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift */,
-				E723A8021DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift */,
+				E7B9E7EA1DD09E25008D4C58 /* PetDetails+CoreDataClass.swift */,
+				E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */,
+				E7B9E7EC1DD09E25008D4C58 /* Photo+CoreDataClass.swift */,
+				E7B9E7ED1DD09E25008D4C58 /* Photo+CoreDataProperties.swift */,
+				E7B9E7EE1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift */,
+				E7B9E7EF1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift */,
+				E7B9E7F01DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift */,
+				E7B9E7F11DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift */,
+				E7B9E7F21DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift */,
+				E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */,
+				E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */,
+				E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */,
 			);
 			path = "ManagedObject+Properties";
+			sourceTree = "<group>";
+		};
+		E7B9E8081DD0B1F2008D4C58 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,25 +398,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E723A8051DB7BEBC0082FAF6 /* Photo+CoreData.swift in Sources */,
+				E7B9E7FD1DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift in Sources */,
+				E7B9E7FB1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift in Sources */,
+				E7B9E7F81DD09E25008D4C58 /* Photo+CoreDataClass.swift in Sources */,
+				E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */,
+				E7B9E8001DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift in Sources */,
+				E7B9E7FC1DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift in Sources */,
+				E7B9E7FA1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift in Sources */,
 				E7057FF71DAFC0F700275683 /* MainScreenVC.swift in Sources */,
 				E7057FF91DB0F54300275683 /* MainTabBarVC.swift in Sources */,
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
+				E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */,
+				E7B9E8031DD0A1AC008D4C58 /* StorageManager.swift in Sources */,
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
-				E723A8081DB7BEBC0082FAF6 /* ReminderSet+CoreData.swift in Sources */,
-				E723A80C1DB7CCB90082FAF6 /* UsedInAppPets+CoreData.swift in Sources */,
-				E723A8071DB7BEBC0082FAF6 /* RemindersAppStack+CoreData.swift in Sources */,
 				E7057FFB1DB103FD00275683 /* MainTableVC.swift in Sources */,
-				E723A8041DB7BEBC0082FAF6 /* PetDetails+CoreData.swift in Sources */,
-				E723A80E1DB7CE310082FAF6 /* DataController.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
+				E7B9E7FF1DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift in Sources */,
 				E723A7DF1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodeld in Sources */,
+				E7B9E7FE1DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
+				E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */,
 				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
 				E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */,
-				E723A8061DB7BEBC0082FAF6 /* RecordsTimeDate+CoreData.swift in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
-				E723A8091DB7BEBC0082FAF6 /* RSTimesPerDay+CoreData.swift in Sources */,
+				E7B9E7F71DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift in Sources */,
+				E7B9E7F91DD09E25008D4C58 /* Photo+CoreDataProperties.swift in Sources */,
+				E7B9E7F61DD09E25008D4C58 /* PetDetails+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B9E8071DD0B10C008D4C58 /* CoreDataTests.swift in Sources */,
 				E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,16 +2,13 @@
 //  Photo+CoreDataProperties.swift
 //  pets-feeding
 //
-//  Created by Nikolay Dementiev on 19.10.16.
+//  Created by Nikolay Dementiev on 07.11.16.
 //  Copyright © 2016 mc373. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-public class Photo: NSManagedObject {
-
-}
 
 extension Photo {
 
@@ -19,11 +16,10 @@ extension Photo {
         return NSFetchRequest<Photo>(entityName: "Photo");
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var createTime: NSDate?
     @NSManaged public var photo: NSData?
     @NSManaged public var photoCategory: Int16
-    @NSManaged public var pet: UsedInAppPets?
+    @NSManaged public var updateTime: NSDate?
     @NSManaged public var photoDetail: PetDetails?
-    @NSManaged public var timeDate: RecordsTimeDate?
 
 }
