@@ -39,6 +39,7 @@
 		E7B9E8071DD0B10C008D4C58 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */; };
 		E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */; };
 		E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */; };
+		E7B9E80E1DD1E315008D4C58 /* DateTimeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPurpose.swift; sourceTree = "<group>"; };
+		E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		E70B606E1DA5453800CE3647 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */,
 				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
 				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
 				E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */,
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B9E80E1DD1E315008D4C58 /* DateTimeEx.swift in Sources */,
 				E7B9E7FD1DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift in Sources */,
 				E7B9E7FB1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift in Sources */,
 				E7B9E7F81DD09E25008D4C58 /* Photo+CoreDataClass.swift in Sources */,

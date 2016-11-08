@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension UsedInAppPets {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UsedInAppPets> {

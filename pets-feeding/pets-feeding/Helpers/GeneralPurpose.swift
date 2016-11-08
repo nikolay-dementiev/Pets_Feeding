@@ -11,7 +11,7 @@ import Foundation
 struct GeneralPurpose {
 	static var shared = GeneralPurpose()
 
-	let nameOfCoreDataEntity = "PetsFeeding"
+	let nameOfCoreDataModel = "PetsFeeding"
 	var dataStorage = StorageManager.shared;
 
 }

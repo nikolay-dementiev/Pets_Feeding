@@ -56,11 +56,16 @@ extension NSPersistentStoreCoordinator {
 
 struct StorageManager {
 
+//	public var nameOfCoreDataModel: String {
+//			return GeneralPurpose.shared.nameOfCoreDataModel
+//	}
+
+	public var nameOfCoreDataModel: String = "PetsFeeding"
 	static var shared = StorageManager()
 
 	@available(iOS 10.0, *)
 	private lazy var persistentContainer: NSPersistentContainer = {
-		let container = NSPersistentContainer(name: "PetsFeeding")
+		let container = NSPersistentContainer(name: self.nameOfCoreDataModel)
 		container.loadPersistentStores { (storeDescription, error) in
 			print("CoreData: Inited \(storeDescription)")
 			guard error == nil else {
@@ -73,7 +78,7 @@ struct StorageManager {
 
 	private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
 		do {
-			return try NSPersistentStoreCoordinator.coordinator(name: "PetsFeeding")
+			return try NSPersistentStoreCoordinator.coordinator(name: self.nameOfCoreDataModel)
 		} catch {
 			print("CoreData: Unresolved error \(error)")
 		}
@@ -103,8 +108,8 @@ struct StorageManager {
 		}
 	}
 
-	mutating func insertNewObject() -> NSManagedObject? {
-		return NSEntityDescription.insertNewObject(forEntityName: "PetsFeeding",
+	mutating func insertNewObject(entityName nameOfCoreDataEntity: String) -> NSManagedObject? {
+		return NSEntityDescription.insertNewObject(forEntityName: nameOfCoreDataEntity,
 		                                           into: context)
 	}
 

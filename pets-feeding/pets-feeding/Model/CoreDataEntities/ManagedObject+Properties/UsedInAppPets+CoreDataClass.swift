@@ -12,19 +12,32 @@ import CoreData
 
 public class UsedInAppPets: NSManagedObject {
 
+	static let nameOfCoreDataEntity = "UsedInAppPets"
+
+	struct Fields {
+
+		var activ: Bool = false
+		var createTime: NSDate?
+		var name: String?
+		var updateTime: NSDate?
+		var petDetails: PetDetails?
+		var petsRemAppStack: NSSet?
+
+	}
+
+//	static func getUsedFields() -> Fields {
+//		return Fields()
+//	}
+
 }
 
 extension UsedInAppPets {
 
-	
-	static func insertNewInstance(
-		//item: String?,
-//	                                   checked: Bool?,
-//	                                   createdDate: NSDate?,
-//	                                   colorItem: UIColor?
-	) -> NSManagedObject? {
+	static func insertNewInstance(_ dataForObject: UsedInAppPets.Fields) -> NSManagedObject? {
 		var dataStorage = GeneralPurpose.shared.dataStorage
-		let usedInAppInstanse: UsedInAppPets  = (dataStorage.insertNewObject() as? UsedInAppPets)!
+//		dataStorage.nameOfCoreDataModel = ""
+
+		let objInstanse: UsedInAppPets  = (dataStorage.insertNewObject(entityName: nameOfCoreDataEntity) as? UsedInAppPets)!
 
 //		toDoItem.item           = item
 //		toDoItem.checked        = checked ?? false
@@ -32,7 +45,14 @@ extension UsedInAppPets {
 //		toDoItem.dateTimeCreate = createdDate
 //		toDoItem.colorItem      = colorItem ?? self.getDefaultColorFortem()
 
-		return usedInAppInstanse
+		objInstanse.activ						= dataForObject.activ
+		objInstanse.createTime			= dataForObject.createTime
+		objInstanse.name						= dataForObject.name
+		objInstanse.updateTime			= dataForObject.updateTime
+		objInstanse.petDetails			= dataForObject.petDetails
+		objInstanse.petsRemAppStack = dataForObject.petsRemAppStack
+
+		return objInstanse
 	}
 
 }
