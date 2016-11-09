@@ -46,10 +46,15 @@ class CoreDataTests: XCTestCase {
                                               petDetails: nil,
                                               petsRemAppStack: nil)
         
-        _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
+        let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                         data: dataForObj,
                                         saveData: true)
         //dataStorageForTest!.saveContext()
+
+        let allItems = UsedInAppPets.getItems(predicate: nil)
+        for item in allItems! {
+            NSLog(item.itemDesctiption)
+        }
     }
     
 }

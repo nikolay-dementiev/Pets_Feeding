@@ -25,6 +25,39 @@ extension StorageManager {
         }
     }
 
+    static func deleteObject(entityName: String, object: NSManagedObject) {
+        let moc = getManagedObjectContext(entityName)
+        moc.delete(object)
+
+        do {
+            try moc.save()
+        } catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
+
+
+    static func deleteAllData(entityName: String) {
+
+        let moc = getManagedObjectContext(entityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.returnsObjectsAsFaults = false
+
+        do {
+            let results = try moc.fetch(fetchRequest)
+            for managedObject in results {
+                let managedObjectData: NSManagedObject = (managedObject as? NSManagedObject)!
+                moc.delete(managedObjectData)
+                
+                try moc.save()
+            }
+        } catch let error as NSError {
+            NSLog("Detele all data in \(entityName) error : \(error) \(error.userInfo)")
+        }
+    }
+
     //MARK: Save
 
     private func save() -> SaveStatus {
@@ -85,7 +118,115 @@ extension StorageManager {
         }
     }
 
-    //getting
+    static func saveContextAndParentContexts(managedObjectContext: NSManagedObjectContext?) {
+        self.saveContext(mo: managedObjectContext)
+        if let parentContext = managedObjectContext?.parent {
+            self.saveContext(mo: parentContext)
+        }
+    }
+
+    //MARK: fetch some data
+    private static func fetchRequestForEntity(entity: String,
+                                              predicate: NSPredicate?,
+                                              sortDescriptors: [NSSortDescriptor]?,
+                                              otherOptions: Dictionary<String, Float>?
+        ) -> NSFetchRequest<NSFetchRequestResult> {
+
+        // Get the main object context
+        let moc = getManagedObjectContext(entity)
+
+        // Get the entity description
+        let entityDescription = NSEntityDescription.entity(forEntityName: entity, in: moc)
+
+        // Create the request
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = entityDescription
+
+        if predicate != nil {
+            request.predicate = predicate
+        }
+
+        request.sortDescriptors = sortDescriptors
+
+        if let options = otherOptions as Dictionary? {
+            for (key, value) in options {
+                if key == "FetchLimit" {
+                    request.fetchLimit = Int(value)
+                } else if key == "BatchSize" {
+                    request.fetchBatchSize = Int(value)
+                }
+            }
+        }
+        return request
+    }
+
+    static func fetchEntity(entityName: String,
+                            predicate: NSPredicate?,
+                            sortDescriptors: [NSSortDescriptor]?,
+                            otherOptions: Dictionary<String, Float>?) -> [AnyObject]? {
+
+        // Get the main object context
+        let moc = getManagedObjectContext(entityName)
+
+        let request = self.fetchRequestForEntity(entity: entityName,
+                                                 predicate: predicate,
+                                                 sortDescriptors: sortDescriptors,
+                                                 otherOptions: otherOptions)
+
+        var list: [AnyObject]?
+
+        do {
+            list = try moc.fetch(request) as? [NSManagedObject]
+            // success ...
+        } catch let error as NSError {
+            // failure
+            print("Fetch failed: \(error.localizedDescription)")
+
+            return nil
+        }
+
+        return list
+    }
+
+    static func fetchEntity(entityName: String, predicate: NSPredicate?) -> [AnyObject]? {
+        return self.fetchEntity(entityName: entityName,
+                                predicate: predicate,
+                                sortDescriptors: nil,
+                                otherOptions: nil)
+    }
+
+    static func fetchEntity(entityName: String,
+                            predicate: NSPredicate?,
+                            sortDescriptors: [NSSortDescriptor]?) -> [AnyObject]? {
+
+        return self.fetchEntity(entityName: entityName,
+                                predicate: predicate,
+                                sortDescriptors: sortDescriptors,
+                                otherOptions: nil)
+    }
+
+    static func countForEntity(entityName: String, predicate: NSPredicate) -> Int {
+        // Get the main object context
+        let moc = getManagedObjectContext(entityName)
+
+        let request = self.fetchRequestForEntity(entity: entityName,
+                                                 predicate: predicate,
+                                                 sortDescriptors: nil,
+                                                 otherOptions: nil)
+
+        var count:Int
+        do {
+            count = try moc.count(for: request)
+        } catch let error as NSError {
+            print("Error returning results count: \(error). \(error.debugDescription)")
+            count = 0
+        }
+
+        return count
+    }
+
+
+    //MARK:- getting smth
     static func getSharedStorageManager(_ entityName: String) -> StorageManager {
 
         let typeOfdata = getTypeOfDataUsingEntityName(entityName)

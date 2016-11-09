@@ -27,6 +27,12 @@ public class UsedInAppPets: NSManagedObject {
 
 extension UsedInAppPets {
 
+    func itemDesctiption() -> String {
+        return "Pet name: '\(name?.description)" +
+            "', record is active: '\(activ.description)" +
+        "', last update time: '\(updateTime?.description)'"
+    }
+
     static func insertNewInstance(storage: StorageManager?,
                                   data dataForObject: UsedInAppPets.Fields,
                                   saveData:Bool?) -> NSManagedObject? {
@@ -44,8 +50,19 @@ extension UsedInAppPets {
         if saveData != nil && saveData! {
             dataStorage.saveContext()
         }
-        
+
         return objInstanse
     }
+
+    static func getItems(predicate:NSPredicate?) -> [UsedInAppPets]? {
+        let dateSort = NSSortDescriptor(key: "name", ascending: true)
+        //        let predicate = NSPredicate(format: "item BEGINSWITH %@", "sd")
+        let array = StorageManager.fetchEntity(entityName: nameOfCoreDataEntity,
+                                               predicate: predicate,
+                                               sortDescriptors: [dateSort]) as? [UsedInAppPets]
+        
+        return array
+    }
+    
     
 }
