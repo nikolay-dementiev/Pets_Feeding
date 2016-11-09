@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Saves changes in the application's managed object context before the application terminates.
 
 		//self.saveContext()
-		GeneralPurpose.shared.dataStorage.saveContext();
+    StorageManager.saveAllContext();
 	}
 
 //	// MARK: - Core Data stack
