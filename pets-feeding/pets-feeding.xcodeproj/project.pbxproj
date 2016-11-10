@@ -36,10 +36,11 @@
 		E7B9E8001DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */; };
 		E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */; };
 		E7B9E8031DD0A1AC008D4C58 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */; };
-		E7B9E8071DD0B10C008D4C58 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */; };
+		E7B9E8071DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8061DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift */; };
 		E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */; };
 		E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */; };
 		E7B9E80E1DD1E315008D4C58 /* DateTimeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */; };
+		E7B9E8441DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,10 +96,11 @@
 		E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		E7B9E8061DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManage+UtilTests.swift"; sourceTree = "<group>"; };
 		E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPurpose.swift; sourceTree = "<group>"; };
 		E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeEx.swift; sourceTree = "<group>"; };
+		E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjects+CoreDataTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +166,8 @@
 		E70B60541DA5445000CE3647 /* pets-feedingTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7B9E8061DD0B10C008D4C58 /* CoreDataTests.swift */,
+				E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */,
+				E7B9E8061DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift */,
 				E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */,
 				E70B60571DA5445000CE3647 /* Info.plist */,
 			);
@@ -435,7 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B9E8071DD0B10C008D4C58 /* CoreDataTests.swift in Sources */,
+				E7B9E8071DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift in Sources */,
+				E7B9E8441DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift in Sources */,
 				E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -144,21 +144,4 @@ class StorageManager {
         return instanseToReturn
     }
     
-
-
-
-    //
-    //	mutating func save() -> SaveStatus {
-    //		if context.hasChanges {
-    //			do {
-    //				try context.save()
-    //				return .saved
-    //			} catch {
-    //				context.rollback()
-    //				return .rolledBack
-    //			}
-    //		}
-    //		return .hasNoChanges
-    //	}
-
 }

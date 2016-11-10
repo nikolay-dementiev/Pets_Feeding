@@ -46,11 +46,11 @@ extension StorageManager {
         fetchRequest.returnsObjectsAsFaults = false
 
         do {
-            let results = try moc.fetch(fetchRequest)
+            let results = try moc.fetch(fetchRequest) as! [NSManagedObject]
             for managedObject in results {
-                let managedObjectData: NSManagedObject = (managedObject as? NSManagedObject)!
+                let managedObjectData: NSManagedObject = managedObject
                 moc.delete(managedObjectData)
-                
+
                 try moc.save()
             }
         } catch let error as NSError {
@@ -102,19 +102,22 @@ extension StorageManager {
         }
     }
 
-    func saveContext() {
+    func saveContext(_ showLogInfo:Bool = false) {
 
         let statusSaving = save();
 
-        switch statusSaving {
-        case .rolledBack:
-            NSLog("Unresolved error has occurred when saving data in CoreData was called")
-        case .hasNoChanges:
-            NSLog("There are no changes to save in CoreData")
-        case .saved:
-            NSLog("The data were successfully saved in CoreData")
-        default:
-            NSLog("Smth were wrong to save in CoreData")
+        if showLogInfo {
+            switch statusSaving {
+            case .rolledBack:
+                NSLog("Unresolved error has occurred when saving data in CoreData was called")
+            case .hasNoChanges:
+                NSLog("There are no changes to save in CoreData")
+            case .saved:
+                NSLog("The data were successfully saved in CoreData")
+            default:
+                NSLog("Smth were wrong to save in CoreData")
+            }
+
         }
     }
 
@@ -237,12 +240,12 @@ extension StorageManager {
     }
 
     static func getManagedObjectContext(_ entityName: String) -> NSManagedObjectContext {
-
+        
         let moc = getSharedStorageManager(entityName).context
-
+        
         return moc
     }
-
+    
     private static func getTypeOfDataUsingEntityName(_ entityName: String) -> String {
         
         return GeneralPurpose.dictionaryOfEntityName[entityName]! as String
