@@ -38,7 +38,6 @@ extension StorageManager {
         }
     }
 
-
     static func deleteAllData(entityName: String) {
 
         let moc = getManagedObjectContext(entityName)

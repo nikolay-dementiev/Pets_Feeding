@@ -43,12 +43,18 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
 
         let initCount = UsedInAppPets.getItems(predicate: nil)?.count ?? 0
 
-        var dataForObj = UsedInAppPets.Fields(activ: false,
-                                              createTime: NSDate.getCurrentDate(),
-                                              name: "Dog Sharik",
-                                              updateTime: NSDate.getCurrentDate(),
-                                              petDetails: nil,
-                                              petsRemAppStack: nil)
+//        var dataForObj = UsedInAppPets.fields(activ: false,
+//                                              createTime: NSDate.getCurrentDate(),
+//                                              name: "Dog Sharik",
+//                                              updateTime: NSDate.getCurrentDate(),
+//                                              petDetails: nil,
+//                                              petsRemAppStack: nil)
+        var dataForObj = FieldsOfUsedInAppPets.sharedInstance.setData(activ: false,
+                                                                   name: "Dog Sharik",
+                                                                   petDetails: nil,
+                                                                   petsRemAppStack: nil,
+                                                                   createTime: NSDate.getCurrentDate(),
+                                                                   updateTime: NSDate.getCurrentDate()) as Fields
 
         let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,

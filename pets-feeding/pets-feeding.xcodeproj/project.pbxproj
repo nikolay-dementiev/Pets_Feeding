@@ -41,6 +41,8 @@
 		E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */; };
 		E7B9E80E1DD1E315008D4C58 /* DateTimeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */; };
 		E7B9E8441DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */; };
+		E7B9E8461DD60A13008D4C58 /* MOCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */; };
+		E7B9E8481DD62B78008D4C58 /* MOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8471DD62B78008D4C58 /* MOC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPurpose.swift; sourceTree = "<group>"; };
 		E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeEx.swift; sourceTree = "<group>"; };
 		E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjects+CoreDataTests.swift"; sourceTree = "<group>"; };
+		E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCProtocol.swift; sourceTree = "<group>"; };
+		E7B9E8471DD62B78008D4C58 /* MOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
 				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
 				E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */,
+				E7B9E8471DD62B78008D4C58 /* MOC.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */,
 				E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */,
 				E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */,
+				E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */,
 			);
 			path = "ManagedObject+Properties";
 			sourceTree = "<group>";
@@ -425,12 +431,14 @@
 				E7B9E7FE1DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
 				E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */,
+				E7B9E8461DD60A13008D4C58 /* MOCProtocol.swift in Sources */,
 				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
 				E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
 				E7B9E7F71DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift in Sources */,
 				E7B9E7F91DD09E25008D4C58 /* Photo+CoreDataProperties.swift in Sources */,
 				E7B9E7F61DD09E25008D4C58 /* PetDetails+CoreDataClass.swift in Sources */,
+				E7B9E8481DD62B78008D4C58 /* MOC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
