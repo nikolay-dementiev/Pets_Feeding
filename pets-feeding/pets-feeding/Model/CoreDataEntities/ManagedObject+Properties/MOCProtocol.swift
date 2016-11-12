@@ -83,7 +83,7 @@ extension MOCProtocol where Self: NSManagedObject {
 
         for (key, value) in dataForObject {
             if value != nil {
-                let tVal = getValueFromField(fieldValue: value!)
+                let tVal = value!.getValueFromField()
                 objInstanse.setValue(tVal, forKey: key)
             }
         }

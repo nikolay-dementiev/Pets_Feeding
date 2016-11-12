@@ -9,12 +9,12 @@
 import Foundation
 import CoreData
 
-protocol ccc {
-    associatedtype ItemType
-    func getValueFromField() -> ItemType
-}
+//protocol ccc {
+//    associatedtype ItemType
+//    func getValueFromField() -> ItemType
+//}
 
-public enum FieldType:ccc {
+public enum FieldType<T> {
 
     case asString(String?)
     case asBool(Bool?)
@@ -24,26 +24,26 @@ public enum FieldType:ccc {
 
     case asClosure((AnyObject)->String)
 
-    func getValueFromField() -> Any? {
+    func getValueFromField() -> T? {
 
         switch self {
         case .asBool(let b):
-            return b!
+            return b as? T
         case .asString(let s):
-            return s!
+            return s as? T
         case .asInt(let i):
-            return i!
+            return i as? T
         case .asNSDate(let ns):
-            return ns!
+            return ns as? T
         case .asMOCObj(let moc):
-            return moc!
+            return moc as? T
         default:
             return nil
         }
     }
 }
 
-typealias TypeOfMOCFields = Dictionary<String, FieldType?>
+typealias TypeOfMOCFields = Dictionary<String, FieldType<Any>?>
 
 
 
