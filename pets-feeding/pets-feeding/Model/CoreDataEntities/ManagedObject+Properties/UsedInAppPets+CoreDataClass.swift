@@ -66,9 +66,9 @@ extension UsedInAppPets: MOCProtocol {
         get {
             return "UsedInAppPets"
         }
-    };
+    }
 
-    static var fields: TypeOfMOCFields {
+    static var fields:TypeOfMOCFields {
         get {
             return fieldsOfClass
         }
@@ -76,7 +76,7 @@ extension UsedInAppPets: MOCProtocol {
             //fieldsOfClass?.setData(data: fields)
             fieldsOfClass = newValue
         }
-    };
+    }
 
     func itemDesctiption() -> String {
         return "Pet name: '\(name!.description)" +
@@ -101,7 +101,8 @@ extension UsedInAppPets: MOCProtocol {
         //        }
         for (key, value) in dataForObject {
             if value != nil {
-                self[key] = value!
+                //self[key] = value!
+                self.setValue(value, forKey: key)
             }
         }
 
@@ -128,7 +129,8 @@ extension UsedInAppPets: MOCProtocol {
         //        objInstanse.petsRemAppStack = settedData.petsRemAppStack
         for (key, value) in dataForObject {
             if value != nil {
-                objInstanse[key] = value!
+                //objInstanse[key] = value!
+                objInstanse.setValue(value, forKey: key)
             }
         }
 
@@ -148,57 +150,56 @@ extension UsedInAppPets: MOCProtocol {
 
         return array
     }
-
 }
 
 //MARK: subscript
 
-extension UsedInAppPets {
-
-    subscript(key: String) -> Any? {
-        get {
-            // return an appropriate subscript value here
-            let valueForReturn: Any?
-            switch key {
-            case "activ":
-                valueForReturn = activ
-            case "name":
-                valueForReturn = name
-            case "petDetails":
-                valueForReturn = petDetails
-            case "petsRemAppStack":
-                valueForReturn = petsRemAppStack
-            case "createTime":
-                valueForReturn = createTime
-            case "updateTime":
-                valueForReturn = updateTime
-            default:
-                valueForReturn = nil
-            }
-
-            return valueForReturn
-        }
-        set(newValue) {
-            // perform a suitable setting action here
-            switch key {
-            case "activ":
-                activ = (newValue ?? false) as! Bool
-            case "name":
-                name = newValue as? String
-            case "petDetails":
-                petDetails = newValue as? PetDetails
-            case "petsRemAppStack":
-                petsRemAppStack = newValue as? NSSet
-            case "createTime":
-                createTime = newValue as? NSDate
-            case "updateTime":
-                updateTime = newValue as? NSDate
-            default:
-                NSLog("Unknown key '\(key)'")
-            }
-        }
-    }
-}
+//extension UsedInAppPets {
+//
+//    subscript(key: String) -> Any? {
+//        get {
+//            // return an appropriate subscript value here
+//            let valueForReturn: Any?
+//            switch key {
+//            case "activ":
+//                valueForReturn = activ
+//            case "name":
+//                valueForReturn = name
+//            case "petDetails":
+//                valueForReturn = petDetails
+//            case "petsRemAppStack":
+//                valueForReturn = petsRemAppStack
+//            case "createTime":
+//                valueForReturn = createTime
+//            case "updateTime":
+//                valueForReturn = updateTime
+//            default:
+//                valueForReturn = nil
+//            }
+//
+//            return valueForReturn
+//        }
+//        set(newValue) {
+//            // perform a suitable setting action here
+//            switch key {
+//            case "activ":
+//                activ = (newValue ?? false) as! Bool
+//            case "name":
+//                name = newValue as? String
+//            case "petDetails":
+//                petDetails = newValue as? PetDetails
+//            case "petsRemAppStack":
+//                petsRemAppStack = newValue as? NSSet
+//            case "createTime":
+//                createTime = newValue as? NSDate
+//            case "updateTime":
+//                updateTime = newValue as? NSDate
+//            default:
+//                NSLog("Unknown key '\(key)'")
+//            }
+//        }
+//    }
+//}
 
 
 //extension UsedInAppPets {

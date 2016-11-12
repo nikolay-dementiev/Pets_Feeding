@@ -49,12 +49,19 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
 //                                              updateTime: NSDate.getCurrentDate(),
 //                                              petDetails: nil,
 //                                              petsRemAppStack: nil)
-        var dataForObj = FieldsOfUsedInAppPets.sharedInstance.setData(activ: false,
-                                                                   name: "Dog Sharik",
-                                                                   petDetails: nil,
-                                                                   petsRemAppStack: nil,
-                                                                   createTime: NSDate.getCurrentDate(),
-                                                                   updateTime: NSDate.getCurrentDate()) as Fields
+//        var dataForObj = FieldsOfUsedInAppPets.sharedInstance.setData(activ: false,
+//                                                                   name: "Dog Sharik",
+//                                                                   petDetails: nil,
+//                                                                   petsRemAppStack: nil,
+//                                                                   createTime: NSDate.getCurrentDate(),
+//                                                                   updateTime: NSDate.getCurrentDate()) as Fields
+        var dataForObj = UsedInAppPets.fields
+        dataForObj  = ["activ": false,
+                       "createTime": NSDate.getCurrentDate(),
+                       "name": "Dog Sharik",
+                       "updateTime": NSDate.getCurrentDate(),
+                       "petDetails": nil,
+                       "petsRemAppStack": nil]
 
         let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,
@@ -65,11 +72,11 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
 //                                                         data: dataForObj,
 //                                                         saveData: true)
 
-        dataForObj.name = "Dog Pet'ka"
+        dataForObj.updateValue("Dog Pet'ka", forKey: "name")//dataForObj.name = "Dog Pet'ka"
         let petObject3 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                          data: dataForObj,
                                                          saveData: true) as! UsedInAppPets
-        dataForObj.name = "Dog Suzja"
+        dataForObj.updateValue("Dog Suzja", forKey: "name")//dataForObj.name = "Dog Suzja"
         petObject3.rewriteItemWithParameters(storage: dataStorageForTest,
                                              data: dataForObj,
                                              saveData: true)

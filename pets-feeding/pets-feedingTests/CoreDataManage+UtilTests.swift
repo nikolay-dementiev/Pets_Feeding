@@ -47,19 +47,27 @@ class CoreDataTests: XCTestCase {
         //        XCTAssertFalse((UsedInAppPets.getItems(predicate: nil)?.count)! > 0)
 
         //* StorageManager - prepare data
-        var dataForObj = UsedInAppPets.Fields(activ: false,
-                                              createTime: NSDate.getCurrentDate(),
-                                              name: "Dog Sharik",
-                                              updateTime: NSDate.getCurrentDate(),
-                                              petDetails: nil,
-                                              petsRemAppStack: nil)
+//        var dataForObj = UsedInAppPets.fields(activ: false,
+//                                              createTime: NSDate.getCurrentDate(),
+//                                              name: "Dog Sharik",
+//                                              updateTime: NSDate.getCurrentDate(),
+//                                              petDetails: nil,
+//                                              petsRemAppStack: nil)
+        var dataForObj = UsedInAppPets.fields
+        dataForObj  = ["activ": false,
+                       "createTime": NSDate.getCurrentDate(),
+                       "name": "Dog Sharik",
+                       "updateTime": NSDate.getCurrentDate(),
+                       "petDetails": nil,
+                       "petsRemAppStack": nil]
+
 
         let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,
                                                         saveData: true)
         currentCount += 1
 
-        dataForObj.name = "Dog Tuzik"
+        dataForObj.updateValue("Dog Tuzik", forKey: "name") 
         let petObject2 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                          data: dataForObj,
                                                          saveData: true)
@@ -85,7 +93,7 @@ class CoreDataTests: XCTestCase {
 
         //* StorageManager.saveAllContext
         let mov = StorageManager.getManagedObjectContext(ourEntityName)
-        dataForObj.name = "Dog Suzja2"
+         dataForObj.updateValue("Dog Suzja2", forKey: "name")//dataForObj.name = "Dog Suzja2"
         _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                             data: dataForObj,
                                             saveData: false)
@@ -95,7 +103,7 @@ class CoreDataTests: XCTestCase {
         XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
 
         StorageManager.saveAllContext()
-        let predicate4 = NSPredicate(format: "name == %@", dataForObj.name!)
+        let predicate4 = NSPredicate(format: "name == %@", dataForObj["name"] as! CVarArg)
         let allItems4 = UsedInAppPets.getItems(predicate: predicate4)
         XCTAssertFalse(allItems4?.count == 0)
 
