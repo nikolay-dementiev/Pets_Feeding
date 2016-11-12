@@ -12,7 +12,7 @@ import XCTest
 class CoreDataTests: XCTestCase {
 
     private let ourEntityName = GeneralPurpose.nameOfCoreDataModelPF
-    private var dataStorageForTest:StorageManager?
+    private var dataStorageForTest: StorageManager?
 
     override func setUp() {
         super.setUp()
@@ -53,21 +53,29 @@ class CoreDataTests: XCTestCase {
 //                                              updateTime: NSDate.getCurrentDate(),
 //                                              petDetails: nil,
 //                                              petsRemAppStack: nil)
+//        var dataForObj = UsedInAppPets.fields
+//        dataForObj  = ["activ": false,
+//                       "createTime": NSDate.getCurrentDate(),
+//                       "name": "Dog Sharik",
+//                       "updateTime": NSDate.getCurrentDate(),
+//                       "petDetails": nil,
+//                       "petsRemAppStack": nil]
+
         var dataForObj = UsedInAppPets.fields
-        dataForObj  = ["activ": false,
-                       "createTime": NSDate.getCurrentDate(),
-                       "name": "Dog Sharik",
-                       "updateTime": NSDate.getCurrentDate(),
-                       "petDetails": nil,
-                       "petsRemAppStack": nil]
+        dataForObj["activ"]  = FieldType.asBool(false)
+        dataForObj["createTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["name"] =  FieldType.asString("Dog Sharik")
+        dataForObj["updateTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["petDetails"] = nil
+        dataForObj["petsRemAppStack"] = nil
 
 
-        let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
+        _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,
                                                         saveData: true)
         currentCount += 1
 
-        dataForObj.updateValue("Dog Tuzik", forKey: "name") 
+        dataForObj.updateValue(FieldType.asString("Dog Tuzik"), forKey: "name")
         let petObject2 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                          data: dataForObj,
                                                          saveData: true)
@@ -93,7 +101,7 @@ class CoreDataTests: XCTestCase {
 
         //* StorageManager.saveAllContext
         let mov = StorageManager.getManagedObjectContext(ourEntityName)
-         dataForObj.updateValue("Dog Suzja2", forKey: "name")//dataForObj.name = "Dog Suzja2"
+         dataForObj.updateValue(FieldType.asString("Dog Suzja2"), forKey: "name")//dataForObj.name = "Dog Suzja2"
         _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                             data: dataForObj,
                                             saveData: false)

@@ -9,38 +9,10 @@
 import Foundation
 import CoreData
 
-//class Fields {
-//    var createTime: NSDate?
-//    var updateTime: NSDate?
-//
-//    func setData(data:Fields) {
-//        if data.createTime != nil && createTime != data.createTime {
-//            createTime = data.createTime
-//        }
-//
-//        if data.updateTime != nil && updateTime != data.updateTime {
-//            updateTime = data.updateTime
-//        }
-//    }
-//
-//    func setData(createTime crTime:NSDate?,
-//                      updateTime upTime:NSDate?) {
-//        if crTime != nil && createTime != crTime {
-//            createTime = crTime
-//        }
-//
-//        if upTime != nil && updateTime != upTime {
-//            updateTime = upTime
-//        }
-//    }
-//}
-
 protocol MOCProtocol {
     associatedtype ItemType
 
     static var nameOfCoreDataEntity: String {get};
-    //static var fields:Fields {get set};
-    //struct Fields
     static var fields:TypeOfMOCFields {get set}
 
     func itemDesctiption() -> String
@@ -53,56 +25,74 @@ protocol MOCProtocol {
     static func getItems(predicate:NSPredicate?) -> [ItemType]?
 
     //not required
-    static func getStorageManager (_ storage: StorageManager?) -> StorageManager
+    static func getStorageManager (_ storage:StorageManager?) -> StorageManager
 }
 
-extension MOCProtocol {
+extension MOCProtocol where Self: NSManagedObject {
 
-    static func getStorageManager (_ storage: StorageManager?) -> StorageManager {
+    static func getStorageManager (_ storage:StorageManager?) -> StorageManager {
         return  storage ?? StorageManager.getSharedStorageManager(nameOfCoreDataEntity)
     }
 
-//    private func keyIsValid(forKey key: String) -> Bool {
-//        return Self.fields.index(forKey: key) != nil
-//    }
-//    subscript(key: String) -> ItemType {
-//        get {
-//            // return an appropriate subscript value here
-//            assert(keyIsValid(forKey: key), "Key was not found")
-//            return Self.fields[key] as! Self.ItemType
-//        }
-//        set(newValue) {
-//            // perform a suitable setting action here
-//            assert(keyIsValid(forKey: key), "Key was not found")
-//            Self.fields[key] = newValue
-//        }
-//    }
+    func itemDesctiption() -> String {
+        var strForReturn:String = ""
+
+        for (key, value) in Self.fields {
+            //let tValue = value ?? "nil"
+            let tValue = value
+           // getValueFromAnyKey(val: &tValue)
+            strForReturn += "\(strForReturn.characters.count > 0 ? ", " : "")'\(key)' = '\(tValue)'"
+        }
+
+        return "\(type(of: self)): \(strForReturn)"
+    }
+
+    static func getItems(predicate: NSPredicate?) -> [NSManagedObject]? {
+        //let iSort = NSSortDescriptor(key: "name", ascending: true)
+        //let predicate = NSPredicate(format: "item BEGINSWITH %@", "sd")
+
+        let array = StorageManager.fetchEntity(entityName: nameOfCoreDataEntity,
+                                               predicate: predicate,
+                                               sortDescriptors: nil) as? [NSManagedObject]
+
+        return array
+    }
+
+
+    func rewriteItemWithParameters (storage: StorageManager?,
+                                    data dataForObject: TypeOfMOCFields,
+                                    saveData: Bool?) {
+        for (key, value) in dataForObject {
+            if value != nil {
+                self.setValue(value, forKey: key)
+            }
+        }
+
+        if saveData != nil && saveData! {
+            let dataStorage = UsedInAppPets.getStorageManager(storage)
+            dataStorage.saveContext()
+        }
+    }
+
+    static func insertNewInstance(storage: StorageManager?,
+                                  data dataForObject: TypeOfMOCFields,
+                                  saveData: Bool?) -> NSManagedObject? {
+
+        let dataStorage = getStorageManager(storage)
+        let objInstanse = dataStorage.insertNewObject(entityName: nameOfCoreDataEntity)!
+
+        for (key, value) in dataForObject {
+            if value != nil {
+                let tVal = getValueFromField(fieldValue: value!)
+                objInstanse.setValue(tVal, forKey: key)
+            }
+        }
+
+        if saveData != nil && saveData! {
+            dataStorage.saveContext()
+        }
+        
+        return objInstanse
+    }    
 }
 
-//protocol subscriptToMOC {
-//    associatedtype ItemType
-//}
-//
-//extension subscriptToMOC {
-//
-//    subscript(key: String) -> Any? {
-//        get {
-//            let valueForReturn: Any?
-//            switch key {
-//            case "createTime":
-//                valueForReturn = ItemType.valueForReturn
-//            case "updateTime":
-//                valueForReturn = ItemType.updateTime
-//            default:
-//                valueForReturn = nil
-//            }
-//
-//            return valueForReturn
-//        }
-//        set(newValue) {
-//            // perform a suitable setting action here
-//            Self[key] = newValue
-//        }
-//    }
-//
-//}

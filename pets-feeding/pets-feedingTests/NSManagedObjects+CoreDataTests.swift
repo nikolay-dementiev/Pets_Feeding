@@ -56,12 +56,12 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
 //                                                                   createTime: NSDate.getCurrentDate(),
 //                                                                   updateTime: NSDate.getCurrentDate()) as Fields
         var dataForObj = UsedInAppPets.fields
-        dataForObj  = ["activ": false,
-                       "createTime": NSDate.getCurrentDate(),
-                       "name": "Dog Sharik",
-                       "updateTime": NSDate.getCurrentDate(),
-                       "petDetails": nil,
-                       "petsRemAppStack": nil]
+        dataForObj["activ"]  = FieldType.asBool(false)
+        dataForObj["createTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["name"] =  FieldType.asString("Dog Sharik")
+        dataForObj["updateTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["petDetails"] = nil
+        dataForObj["petsRemAppStack"] = nil
 
         let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,
@@ -72,11 +72,11 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
 //                                                         data: dataForObj,
 //                                                         saveData: true)
 
-        dataForObj.updateValue("Dog Pet'ka", forKey: "name")//dataForObj.name = "Dog Pet'ka"
+        dataForObj.updateValue(FieldType.asString("Dog Pet'ka"), forKey: "name")//dataForObj.name = "Dog Pet'ka"
         let petObject3 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                          data: dataForObj,
                                                          saveData: true) as! UsedInAppPets
-        dataForObj.updateValue("Dog Suzja", forKey: "name")//dataForObj.name = "Dog Suzja"
+        dataForObj.updateValue(FieldType.asString("Dog Suzja"), forKey: "name")//dataForObj.name = "Dog Suzja"
         petObject3.rewriteItemWithParameters(storage: dataStorageForTest,
                                              data: dataForObj,
                                              saveData: true)

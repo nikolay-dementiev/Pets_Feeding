@@ -251,8 +251,6 @@
 		E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */ = {
 			isa = PBXGroup;
 			children = (
-				E7B9E7EA1DD09E25008D4C58 /* PetDetails+CoreDataClass.swift */,
-				E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */,
 				E7B9E7EC1DD09E25008D4C58 /* Photo+CoreDataClass.swift */,
 				E7B9E7ED1DD09E25008D4C58 /* Photo+CoreDataProperties.swift */,
 				E7B9E7EE1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift */,
@@ -261,6 +259,8 @@
 				E7B9E7F11DD09E25008D4C58 /* ReminderSet+CoreDataProperties.swift */,
 				E7B9E7F21DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift */,
 				E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */,
+				E7B9E7EA1DD09E25008D4C58 /* PetDetails+CoreDataClass.swift */,
+				E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */,
 				E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */,
 				E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */,
 				E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */,

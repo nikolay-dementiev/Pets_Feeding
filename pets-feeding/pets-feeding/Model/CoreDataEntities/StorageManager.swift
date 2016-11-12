@@ -110,7 +110,7 @@ class StorageManager {
     // MARK: Public methods
 
     enum SaveStatus {
-        case saved, rolledBack, hasNoChanges
+        case saved, rolledBack, hasNoChanges, smth
     }
 
     var context: NSManagedObjectContext {
