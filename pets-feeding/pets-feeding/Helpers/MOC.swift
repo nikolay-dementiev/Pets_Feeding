@@ -14,37 +14,60 @@ import CoreData
 //    func getValueFromField() -> ItemType
 //}
 
+//enum TypeOfMOCFields<Key: Hashable, Value: Hashable> {
+//    typealias T = Dictionary<Key, Value?>//[Key: Value]
+//}
+
 public enum FieldType<T> {
 
-    case asString(String?)
-    case asBool(Bool?)
-    case asInt(Int?)
-    case asNSDate(NSDate?)
-    case asMOCObj(NSManagedObject?)
+    //    case asString(String?)
+    //    case asBool(Bool?)
+    //    case asInt(Int?)
+    //    case asNSDate(NSDate?)
+    //    case asMOCObj(NSManagedObject?)
+    // case asClosure((AnyObject)->String)
 
-    case asClosure((AnyObject)->String)
+    case some(T)
+    case none
 
-    func getValueFromField() -> T? {
-
-        switch self {
-        case .asBool(let b):
-            return b as? T
-        case .asString(let s):
-            return s as? T
-        case .asInt(let i):
-            return i as? T
-        case .asNSDate(let ns):
-            return ns as? T
-        case .asMOCObj(let moc):
-            return moc as? T
-        default:
-            return nil
-        }
+    init(_ value: T) {
+        self = .some(value)
     }
+
+    init() {
+        self = .none
+    }
+
+    func unwrap() -> Any {
+        switch self {
+        case FieldType.some(let x):
+            return x
+        default:
+            assert(true, "Unexpectedly found nil while unwrapping an optional value")
+        }
+        return FieldType.none
+    }
+
+    //    func getValueFromField() -> T? {
+    //
+    //        switch self {
+    //        case .asBool(let b):
+    //            return b as? T
+    //        case .asString(let s):
+    //            return s as? T
+    //        case .asInt(let i):
+    //            return i as? T
+    //        case .asNSDate(let ns):
+    //            return ns as? T
+    //        case .asMOCObj(let moc):
+    //            return moc as? T
+    //        default:
+    //            return nil
+    //        }
+    //    }
 }
 
 typealias TypeOfMOCFields = Dictionary<String, FieldType<Any>?>
-
 
 
 

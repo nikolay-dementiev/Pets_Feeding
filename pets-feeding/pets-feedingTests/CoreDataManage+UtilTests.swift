@@ -61,11 +61,19 @@ class CoreDataTests: XCTestCase {
 //                       "petDetails": nil,
 //                       "petsRemAppStack": nil]
 
+//        var dataForObj = UsedInAppPets.fields
+//        dataForObj["activ"]  = FieldType.asBool(false)
+//        dataForObj["createTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+//        dataForObj["name"] =  FieldType.asString("Dog Sharik")
+//        dataForObj["updateTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+//        dataForObj["petDetails"] = nil
+//        dataForObj["petsRemAppStack"] = nil
+
         var dataForObj = UsedInAppPets.fields
-        dataForObj["activ"]  = FieldType.asBool(false)
-        dataForObj["createTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
-        dataForObj["name"] =  FieldType.asString("Dog Sharik")
-        dataForObj["updateTime"] = FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["activ"]  = FieldType(false)//FieldType.asBool(false)
+        dataForObj["createTime"] = FieldType(NSDate.getCurrentDate())//FieldType.asNSDate(NSDate.getCurrentDate())
+        dataForObj["name"] =  FieldType("Dog Sharik")//FieldType.asString("Dog Sharik")
+        dataForObj["updateTime"] = FieldType(NSDate.getCurrentDate())//FieldType.asNSDate(NSDate.getCurrentDate())
         dataForObj["petDetails"] = nil
         dataForObj["petsRemAppStack"] = nil
 
@@ -75,7 +83,8 @@ class CoreDataTests: XCTestCase {
                                                         saveData: true)
         currentCount += 1
 
-        dataForObj.updateValue(FieldType.asString("Dog Tuzik"), forKey: "name")
+        //dataForObj.updateValue(FieldType.asString("Dog Tuzik"), forKey: "name")
+        dataForObj.updateValue(FieldType("Dog Tuzik"), forKey: "name")
         let petObject2 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                          data: dataForObj,
                                                          saveData: true)
@@ -101,7 +110,8 @@ class CoreDataTests: XCTestCase {
 
         //* StorageManager.saveAllContext
         let mov = StorageManager.getManagedObjectContext(ourEntityName)
-         dataForObj.updateValue(FieldType.asString("Dog Suzja2"), forKey: "name")//dataForObj.name = "Dog Suzja2"
+//         dataForObj.updateValue(FieldType.asString("Dog Suzja2"), forKey: "name")//dataForObj.name = "Dog Suzja2"
+         dataForObj.updateValue(FieldType("Dog Suzja2"), forKey: "name")
         _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                             data: dataForObj,
                                             saveData: false)

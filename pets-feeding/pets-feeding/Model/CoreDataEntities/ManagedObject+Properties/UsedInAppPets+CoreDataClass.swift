@@ -12,10 +12,10 @@ import CoreData
 
 public class UsedInAppPets: NSManagedObject {
 
-    static var fieldsOfClass:TypeOfMOCFields = ["activ": FieldType.asBool(false),
-                                                "name": FieldType.asString(""),
-                                                "createTime": FieldType.asNSDate(nil),
-                                                "updateTime": FieldType.asNSDate(nil),
+    static var fieldsOfClass:TypeOfMOCFields = ["activ": FieldType(false),//FieldType.asBool(false),
+                                                "name": FieldType(""),//FieldType.asString(""),
+                                                "createTime": nil,
+                                                "updateTime": nil,
                                                 "petDetails": nil,
                                                 "petsRemAppStack": nil]
 
