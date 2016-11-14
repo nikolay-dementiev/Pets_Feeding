@@ -60,8 +60,8 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
         dataForObj["createTime"] = FieldType(NSDate.getCurrentDate())//FieldType.asNSDate(NSDate.getCurrentDate())
         dataForObj["name"] =  FieldType("Dog Sharik")//FieldType.asString("Dog Sharik")
         dataForObj["updateTime"] = FieldType(NSDate.getCurrentDate())//FieldType.asNSDate(NSDate.getCurrentDate())
-        dataForObj["petDetails"] = nil
-        dataForObj["petsRemAppStack"] = nil
+        dataForObj["petDetails"] = FieldType()
+        dataForObj["petsRemAppStack"] = FieldType()
 
         let petObject = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
                                                         data: dataForObj,
@@ -82,9 +82,7 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
         petObject3.rewriteItemWithParameters(storage: dataStorageForTest,
                                              data: dataForObj,
                                              saveData: true)
-        XCTAssertEqual(petObject3.itemDesctiption(), "Pet name: '\(petObject3.name?.description)" +
-            "', record is active: '\(petObject3.activ.description)" +
-            "', last update time: '\(petObject3.updateTime?.description)'")
+        XCTAssertEqual(petObject3.itemDesctiption(), "UsedInAppPets: 'name' = 'Dog Suzja', 'petDetails' = 'none', 'active': 'false','createTime' = '\(petObject3.createTime!)', 'petsRemAppStack' = 'none', 'updateTime' = '\(petObject3.updateTime!)'")
 
         //show all records
         XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, initCount+2)

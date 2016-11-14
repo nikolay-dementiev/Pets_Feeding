@@ -26,6 +26,7 @@ protocol MOCProtocol {
 
     //not required
     static func getStorageManager (_ storage:StorageManager?) -> StorageManager
+    static func syncFields(_ fields: TypeOfMOCFields)
 }
 
 extension MOCProtocol where Self: NSManagedObject {
@@ -39,7 +40,8 @@ extension MOCProtocol where Self: NSManagedObject {
 
         for (key, value) in Self.fields {
             //let tValue = value ?? "nil"
-            let tValue = value
+            let tValue = value.unwrap()
+
            // getValueFromAnyKey(val: &tValue)
             strForReturn += "\(strForReturn.characters.count > 0 ? ", " : "")'\(key)' = '\(tValue)'"
         }
@@ -62,9 +64,16 @@ extension MOCProtocol where Self: NSManagedObject {
     func rewriteItemWithParameters (storage: StorageManager?,
                                     data dataForObject: TypeOfMOCFields,
                                     saveData: Bool?) {
+
+        Self.syncFields(dataForObject)
+
         for (key, value) in dataForObject {
-            if value != nil {
-                self.setValue(value, forKey: key)
+//            if value != nil {
+//                self.setValue(value, forKey: key)
+//            }
+            if value.notNil() {
+                let tVal = value.unwrap()
+                self.setValue(tVal, forKey: key)
             }
         }
 
@@ -81,11 +90,19 @@ extension MOCProtocol where Self: NSManagedObject {
         let dataStorage = getStorageManager(storage)
         let objInstanse = dataStorage.insertNewObject(entityName: nameOfCoreDataEntity)!
 
+        syncFields(dataForObject)
+
         for (key, value) in dataForObject {
-            if value != nil {
-//                let tVal = value!.getValueFromField()
-                let tVal = value!.unwrap()
-//                    let tVal2 = tVal as tVal.Type
+//            if value != nil {
+////                let tVal = value!.getValueFromField()
+//                let tVal = value!.unwrap()
+////                    let tVal2 = tVal as tVal.Type
+//
+//                objInstanse.setValue(tVal, forKey: key)
+//            }
+
+            if value.notNil() {
+                let tVal = value.unwrap()
 
                 objInstanse.setValue(tVal, forKey: key)
             }
@@ -96,6 +113,13 @@ extension MOCProtocol where Self: NSManagedObject {
         }
         
         return objInstanse
-    }    
+    }
+
+
+    static func syncFields(_ fields: TypeOfMOCFields) {
+        Self.fields = fields
+    }
+
+    //MARK: - protocol own methods
 }
 

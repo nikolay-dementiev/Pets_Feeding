@@ -121,7 +121,9 @@ class CoreDataTests: XCTestCase {
         XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
 
         StorageManager.saveAllContext()
-        let predicate4 = NSPredicate(format: "name == %@", dataForObj["name"] as! CVarArg)
+
+        let predicateSearchValue = dataForObj["name"]?.unwrapWithCasting()
+        let predicate4 = NSPredicate(format: "name == %@", predicateSearchValue!)
         let allItems4 = UsedInAppPets.getItems(predicate: predicate4)
         XCTAssertFalse(allItems4?.count == 0)
 

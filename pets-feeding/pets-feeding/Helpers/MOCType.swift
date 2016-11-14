@@ -27,11 +27,11 @@ public enum FieldType<T> {
     //    case asMOCObj(NSManagedObject?)
     // case asClosure((AnyObject)->String)
 
-    case some(T)
+    case someVal(T)
     case none
 
     init(_ value: T) {
-        self = .some(value)
+        self = .someVal(value)
     }
 
     init() {
@@ -40,13 +40,36 @@ public enum FieldType<T> {
 
     func unwrap() -> Any {
         switch self {
-        case FieldType.some(let x):
+        case FieldType.someVal(let x):
             return x
         default:
             assert(true, "Unexpectedly found nil while unwrapping an optional value")
         }
         return FieldType.none
     }
+
+    func unwrapWithCasting() -> CVarArg {
+        if notNil() {
+            return unwrap() as! CVarArg
+        } else {
+            return NSNull()
+        }
+    }
+
+    func notNil() -> Bool {
+        switch self {
+        case FieldType.someVal:
+            return true
+        default:
+            return false
+        }
+    }
+
+//    func unwrapString() -> String {
+//        let variableToReturn:String = unwrap() as! String
+//
+//        return variableToReturn
+//    }
 
     //    func getValueFromField() -> T? {
     //
@@ -67,7 +90,8 @@ public enum FieldType<T> {
     //    }
 }
 
-typealias TypeOfMOCFields = Dictionary<String, FieldType<Any>?>
+//typealias FieldMOC = FieldType<Any>
+typealias TypeOfMOCFields = Dictionary<String, FieldType<Any>>
 
 
 

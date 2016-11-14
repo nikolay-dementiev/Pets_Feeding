@@ -12,10 +12,10 @@ import CoreData
 
 public class PetDetails: NSManagedObject {
 
-    static var fieldsOfClass:TypeOfMOCFields = ["pet": nil,
-                                                "petRS": nil,
-                                                "photo": nil,
-                                                "createTime": nil,
-                                                "updateTime": nil]
+//    static var fieldsOfClass:TypeOfMOCFields = ["pet": nil,
+//                                                "petRS": nil,
+//                                                "photo": nil,
+//                                                "createTime": nil,
+//                                                "updateTime": nil]
 }
 
