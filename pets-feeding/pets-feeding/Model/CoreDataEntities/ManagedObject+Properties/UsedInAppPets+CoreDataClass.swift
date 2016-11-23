@@ -12,8 +12,8 @@ import CoreData
 
 public class UsedInAppPets: NSManagedObject {
 
-    static var fieldsOfClass:TypeOfMOCFields = ["activ": FieldType(false),//FieldType.asBool(false),
-                                                "name": FieldType(""),//FieldType.asString(""),
+    static var fields:TypeOfMOCFields = ["activ": FieldType(false),
+                                                "name": FieldType(""),
                                                 "createTime": FieldType(),
                                                 "updateTime": FieldType(),
                                                 "petDetails": FieldType(),
@@ -27,63 +27,4 @@ extension UsedInAppPets: MOCProtocol {
         return "UsedInAppPets"
     }
 
-    static var fields: TypeOfMOCFields {
-        get {
-            return fieldsOfClass
-        }
-        set {
-            fieldsOfClass = newValue
-        }
-    }
-
-//    func itemDesctiption() -> String {
-//        return "Pet name: '\(name!.description)" +
-//            "', record is active: '\(activ.description)" +
-//        "', last update time: '\(updateTime!.description)'"
-//    }
-
-//    func rewriteItemWithParameters (storage: StorageManager?,
-//                                    data dataForObject: TypeOfMOCFields,
-//                                    saveData: Bool?) {
-//        for (key, value) in dataForObject {
-//            if value != nil {
-//                self.setValue(value, forKey: key)
-//            }
-//        }
-//
-//        if saveData != nil && saveData! {
-//            let dataStorage = UsedInAppPets.getStorageManager(storage)
-//            dataStorage.saveContext()
-//        }
-//    }
-
-//    static func insertNewInstance(storage: StorageManager?,
-//                                  data dataForObject: TypeOfMOCFields,
-//                                  saveData: Bool?) -> NSManagedObject? {
-//
-//        let dataStorage = getStorageManager(storage)
-//        let objInstanse: UsedInAppPets  = (dataStorage.insertNewObject(entityName: nameOfCoreDataEntity) as? UsedInAppPets)!
-//
-//        for (key, value) in dataForObject {
-//            if value != nil {
-//                objInstanse.setValue(value, forKey: key)
-//            }
-//        }
-//
-//        if saveData != nil && saveData! {
-//            dataStorage.saveContext()
-//        }
-//
-//        return objInstanse
-//    }
-
-//    static func getItems(predicate: NSPredicate?) -> [UsedInAppPets.ItemType]? {
-//        let iSort = NSSortDescriptor(key: "name", ascending: true)
-//        //        let predicate = NSPredicate(format: "item BEGINSWITH %@", "sd")
-//        let array = StorageManager.fetchEntity(entityName: nameOfCoreDataEntity,
-//                                               predicate: predicate,
-//                                               sortDescriptors: [iSort]) as? [UsedInAppPets]
-//        
-//        return array
-//    }
 }

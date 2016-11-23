@@ -12,10 +12,17 @@ import CoreData
 
 public class PetDetails: NSManagedObject {
 
-//    static var fieldsOfClass:TypeOfMOCFields = ["pet": nil,
-//                                                "petRS": nil,
-//                                                "photo": nil,
-//                                                "createTime": nil,
-//                                                "updateTime": nil]
+    static var fields:TypeOfMOCFields = ["pet": FieldType(),
+                                         "petRS": FieldType(),
+                                         "photo": FieldType(),
+                                         "createTime": FieldType(),
+                                         "updateTime": FieldType()]
 }
 
+extension PetDetails: MOCProtocol {
+
+    static var nameOfCoreDataEntity: String {
+        return "PetDetails"
+    }
+
+}

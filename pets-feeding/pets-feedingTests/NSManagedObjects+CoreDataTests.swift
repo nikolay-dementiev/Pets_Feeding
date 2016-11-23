@@ -82,7 +82,7 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
         petObject3.rewriteItemWithParameters(storage: dataStorageForTest,
                                              data: dataForObj,
                                              saveData: true)
-        XCTAssertEqual(petObject3.itemDesctiption(), "UsedInAppPets: 'name' = 'Dog Suzja', 'petDetails' = 'none', 'active': 'false','createTime' = '\(petObject3.createTime!)', 'petsRemAppStack' = 'none', 'updateTime' = '\(petObject3.updateTime!)'")
+        XCTAssertEqual(petObject3.itemDesctiption(), "UsedInAppPets: 'name' = 'Dog Suzja', 'petDetails' = 'none', 'activ' = 'false', 'createTime' = '\(petObject3.createTime!)', 'petsRemAppStack' = 'none', 'updateTime' = '\(petObject3.updateTime!)'")
 
         //show all records
         XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, initCount+2)

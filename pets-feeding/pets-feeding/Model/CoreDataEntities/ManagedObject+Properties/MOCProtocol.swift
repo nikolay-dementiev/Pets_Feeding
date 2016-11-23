@@ -9,11 +9,16 @@
 import Foundation
 import CoreData
 
+//extension NSManagedObject {
+//    static var fieldsOfClass:TypeOfMOCFields = ["<none>": FieldType()]
+//}
+
 protocol MOCProtocol {
     associatedtype ItemType
 
-    static var nameOfCoreDataEntity: String {get};
+    static var nameOfCoreDataEntity: String {get}
     static var fields:TypeOfMOCFields {get set}
+//    static var fieldsOfClass:TypeOfMOCFields {get set}
 
     func itemDesctiption() -> String
     func rewriteItemWithParameters (storage:StorageManager?,
@@ -30,6 +35,15 @@ protocol MOCProtocol {
 }
 
 extension MOCProtocol where Self: NSManagedObject {
+
+//    static var fields: TypeOfMOCFields {
+//        get {
+//            return Self.fieldsOfClass
+//        }
+//        set {
+//            Self.fieldsOfClass = newValue
+//        }
+//    }
 
     static func getStorageManager (_ storage:StorageManager?) -> StorageManager {
         return  storage ?? StorageManager.getSharedStorageManager(nameOfCoreDataEntity)
@@ -65,12 +79,13 @@ extension MOCProtocol where Self: NSManagedObject {
                                     data dataForObject: TypeOfMOCFields,
                                     saveData: Bool?) {
 
-        Self.syncFields(dataForObject)
+        //set data of record creations
+        let currentDataForObject = Self.setDateTimeLog(data: dataForObject, forNewRecord: false)
 
-        for (key, value) in dataForObject {
-//            if value != nil {
-//                self.setValue(value, forKey: key)
-//            }
+        Self.syncFields(currentDataForObject)
+
+        for (key, value) in currentDataForObject {
+
             if value.notNil() {
                 let tVal = value.unwrap()
                 self.setValue(tVal, forKey: key)
@@ -90,16 +105,12 @@ extension MOCProtocol where Self: NSManagedObject {
         let dataStorage = getStorageManager(storage)
         let objInstanse = dataStorage.insertNewObject(entityName: nameOfCoreDataEntity)!
 
-        syncFields(dataForObject)
+        //set data of record creations
+        let currentDataForObject = setDateTimeLog(data: dataForObject, forNewRecord: true)
 
-        for (key, value) in dataForObject {
-//            if value != nil {
-////                let tVal = value!.getValueFromField()
-//                let tVal = value!.unwrap()
-////                    let tVal2 = tVal as tVal.Type
-//
-//                objInstanse.setValue(tVal, forKey: key)
-//            }
+        syncFields(currentDataForObject)
+
+        for (key, value) in currentDataForObject {
 
             if value.notNil() {
                 let tVal = value.unwrap()
@@ -113,6 +124,21 @@ extension MOCProtocol where Self: NSManagedObject {
         }
         
         return objInstanse
+    }
+
+    private static func setDateTimeLog(data dataForObject: TypeOfMOCFields,
+                               forNewRecord itIsNewRecord: Bool) -> TypeOfMOCFields {
+
+        var currentDataForObject = dataForObject;
+        let currentDateTimed = NSDate.getCurrentDate();
+
+        currentDataForObject["updateTime"] = FieldType(currentDateTimed);
+
+        if itIsNewRecord {
+            currentDataForObject["createTime"] = FieldType(currentDateTimed);
+        }
+
+        return currentDataForObject
     }
 
 
