@@ -38,14 +38,16 @@ class CoreDataTests: XCTestCase {
         }
     }
 
+    //MARK: - testCoreData
+    //MARK: UsedInAppPets
     func testCoreData_UsedInAppPets() {
 
-        let initCount = UsedInAppPets.getItems(predicate: nil)?.count ?? 0
+        let initCount = UsedInAppPets.countOfItemInEntity
         var currentCount = initCount
 
         let nameOfCoreDataEntity = UsedInAppPets.nameOfCoreDataEntity
         //        StorageManager.deleteAllData(entityName: nameOfCoreDataEntity)
-        //        XCTAssertFalse((UsedInAppPets.getItems(predicate: nil)?.count)! > 0)
+        //        XCTAssertFalse((UsedInAppPets.countOfItemInEntity)! > 0)
 
         //* StorageManager - prepare data
         var dataForObj = UsedInAppPets.fields
@@ -68,7 +70,7 @@ class CoreDataTests: XCTestCase {
         currentCount += 1
 
         //chek count
-        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 
         //deleting  data
         //* StorageManager.deleteObject
@@ -76,7 +78,7 @@ class CoreDataTests: XCTestCase {
         StorageManager.deleteObject(entityName: ourEntityName, object: petObject2!)
 
         currentCount -= 1
-        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 
         //try to find this item
         let predicate2 = NSPredicate(format: "name == %@", petObject2Name!)
@@ -93,7 +95,7 @@ class CoreDataTests: XCTestCase {
 
         StorageManager.saveContext(mo: mov)
         currentCount += 1
-        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 
         StorageManager.saveAllContext()
 
@@ -104,32 +106,22 @@ class CoreDataTests: XCTestCase {
 
         //* StorageManager.deleteAllData
         StorageManager.deleteAllData(entityName: nameOfCoreDataEntity)
-        XCTAssertFalse((UsedInAppPets.getItems(predicate: nil)?.count)! > 0)
+        XCTAssertFalse(UsedInAppPets.countOfItemInEntity > 0)
         
     }
 
+    //MARK: PetDetails
     func testCoreData_PetDetails() {
 
-        let initCount = PetDetails.getItems(predicate: nil)?.count ?? 0
+        let initCount = PetDetails.countOfItemInEntity
         var currentCount = initCount
 
         let nameOfCoreDataEntity = UsedInAppPets.nameOfCoreDataEntity
-        //        StorageManager.deleteAllData(entityName: nameOfCoreDataEntity)
-        //        XCTAssertFalse((UsedInAppPets.getItems(predicate: nil)?.count)! > 0)
 
         //* StorageManager - prepare data
-        var dataForObj = UsedInAppPets.fields
-        dataForObj["pet"]  = FieldType()
-        dataForObj["petRS"] = FieldType()
-        dataForObj["photo"] =  FieldType()
-//        dataForObj["createTime"] = FieldType(NSDate.getCurrentDate())
-//        dataForObj["updateTime"] = FieldType(NSDate.getCurrentDate())
+        let petdetailObject1 = createNewInstanse_PetDetails(pet: nil, petRS: nil, petPhoto: nil)
+        currentCount += 1
 
-//        _ = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
-//                                            data: dataForObj,
-//                                            saveData: true)
-//        currentCount += 1
-//
 //        dataForObj.updateValue(FieldType("Dog Tuzik"), forKey: "name")
 //        let petObject2 = UsedInAppPets.insertNewInstance(storage: dataStorageForTest,
 //                                                         data: dataForObj,
@@ -137,7 +129,7 @@ class CoreDataTests: XCTestCase {
 //        currentCount += 1
 //
 //        //chek count
-//        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+//        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 //
 //        //deleting  data
 //        //* StorageManager.deleteObject
@@ -145,7 +137,7 @@ class CoreDataTests: XCTestCase {
 //        StorageManager.deleteObject(entityName: ourEntityName, object: petObject2!)
 //
 //        currentCount -= 1
-//        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+//        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 //
 //        //try to find this item
 //        let predicate2 = NSPredicate(format: "name == %@", petObject2Name!)
@@ -162,7 +154,7 @@ class CoreDataTests: XCTestCase {
 //
 //        StorageManager.saveContext(mo: mov)
 //        currentCount += 1
-//        XCTAssertEqual(UsedInAppPets.getItems(predicate: nil)?.count, currentCount)
+//        XCTAssertEqual(UsedInAppPets.countOfItemInEntity, currentCount)
 //
 //        StorageManager.saveAllContext()
 //
@@ -173,8 +165,63 @@ class CoreDataTests: XCTestCase {
 //
 //        //* StorageManager.deleteAllData
 //        StorageManager.deleteAllData(entityName: nameOfCoreDataEntity)
-//        XCTAssertFalse((UsedInAppPets.getItems(predicate: nil)?.count)! > 0)
+//        XCTAssertFalse(UsedInAppPets.countOfItemInEntity > 0)
         
     }
+
+    private func createNewInstanse_PetDetails(pet:UsedInAppPets?,
+                                              petRS:ReminderSet?,
+                                              petPhoto:PetPhoto?) -> PetDetails {
+
+        var dataForObj = PetDetails.fields
+        dataForObj["pet"]  = FieldType(pet)
+        dataForObj["petRS"] = FieldType(petRS)
+        dataForObj["petPhoto"] =  FieldType(petPhoto)
+
+        let newInstanseObject = PetDetails.insertNewInstance(storage: dataStorageForTest,
+                                         data: dataForObj,
+                                         saveData: true) as! PetDetails
+
+        return newInstanseObject
+
+    }
+
+    //MARK: PetDetails
+    func testCoreData_PetPhoto() {
+  
+        let initCount = PetPhoto.countOfItemInEntity
+        var currentCount = initCount
+
+        let nameOfCoreDataEntity = PetPhoto.nameOfCoreDataEntity
+
+        //* StorageManager - prepare data
+        let dictionaryOfTestableImages = ImageWork.testImageDictionary;
+
+        let petPhotoSad = createNewInstanse_PetPhoto(dict: dictionaryOfTestableImages,
+                                                        photoCategory: PhotoCategory.sad,
+                                                        photoDetail: nil)
+        currentCount += 1
+    }
+
+    private func createNewInstanse_PetPhoto(dict: [PhotoCategory: NSData],
+                                              photoCategory: PhotoCategory,
+                                              photoDetail: PetDetails?) -> PetPhoto {
+
+        let petPhoto: NSData? = dict[photoCategory]
+        var dataForObj = PetPhoto.fields
+
+        dataForObj["petPhoto"]  = FieldType(petPhoto)
+        dataForObj["photoCategory"] = FieldType(photoCategory)
+        dataForObj["photoDetail"] =  FieldType(petPhoto)
+
+        let newInstanseObject = PetPhoto.insertNewInstance(storage: dataStorageForTest,
+                                                             data: dataForObj,
+                                                             saveData: true) as! PetPhoto
+
+        return newInstanseObject
+    }
+
+    //MARK: - inner functions
+
     
 }

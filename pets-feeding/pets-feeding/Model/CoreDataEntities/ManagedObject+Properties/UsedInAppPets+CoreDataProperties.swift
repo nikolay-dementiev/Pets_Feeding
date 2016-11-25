@@ -16,11 +16,11 @@ extension UsedInAppPets {
     }
 
     @NSManaged public var activ: Bool
-    @NSManaged public var createTime: NSDate?
     @NSManaged public var name: String?
-    @NSManaged public var updateTime: NSDate?
     @NSManaged public var petDetails: PetDetails?
     @NSManaged public var petsRemAppStack: NSSet?
+    @NSManaged public var createTime: NSDate?
+    @NSManaged public var updateTime: NSDate?
 
 }
 

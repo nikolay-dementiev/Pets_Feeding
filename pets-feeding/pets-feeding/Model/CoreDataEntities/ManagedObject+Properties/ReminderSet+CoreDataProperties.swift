@@ -17,10 +17,10 @@ extension ReminderSet {
     }
 
     @NSManaged public var active: NSNumber?
+    @NSManaged public var petDetail: PetDetails?
+    @NSManaged public var reminder: RemindersAppStack?
     @NSManaged public var createTime: NSDate?
     @NSManaged public var updateTime: NSDate?
-    @NSManaged public var petDetail: PetDetails?
-    @NSManaged public var reminder: NSSet?
 
 }
 

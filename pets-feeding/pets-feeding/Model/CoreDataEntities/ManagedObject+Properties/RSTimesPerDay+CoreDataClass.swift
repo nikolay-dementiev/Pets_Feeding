@@ -12,4 +12,19 @@ import CoreData
 
 public class RSTimesPerDay: NSManagedObject {
 
+    static var fields:TypeOfMOCFields = ["active": FieldType(false),
+                                         "stateDayCategory": FieldType(DayCategory.self),
+                                         "timeScheduledOn": FieldType(),
+                                         "reminderSet": FieldType(ReminderSet.self),
+                                         "createTime": FieldType(),
+                                         "updateTime": FieldType()]
+
+}
+
+extension RSTimesPerDay: MOCProtocol {
+
+    static var nameOfCoreDataEntity: String {
+        return "RSTimesPerDay"
+    }
+    
 }

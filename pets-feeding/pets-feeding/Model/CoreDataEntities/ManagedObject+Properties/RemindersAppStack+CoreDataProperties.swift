@@ -17,11 +17,11 @@ extension RemindersAppStack {
     }
 
     @NSManaged public var acive: Bool
-    @NSManaged public var createTime: NSDate?
     @NSManaged public var dateProcessed: NSDate?
     @NSManaged public var dateScheduledOn: NSDate?
     @NSManaged public var idShedule: String?
-    @NSManaged public var updateTime: NSDate?
     @NSManaged public var pet: UsedInAppPets?
+    @NSManaged public var createTime: NSDate?
+    @NSManaged public var updateTime: NSDate?
 
 }

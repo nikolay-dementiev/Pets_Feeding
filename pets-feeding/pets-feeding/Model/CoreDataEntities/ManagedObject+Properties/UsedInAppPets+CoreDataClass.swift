@@ -14,10 +14,10 @@ public class UsedInAppPets: NSManagedObject {
 
     static var fields:TypeOfMOCFields = ["activ": FieldType(false),
                                                 "name": FieldType(""),
+                                                "petDetails": FieldType(PetDetails.self),
+                                                "petsRemAppStack": FieldType(RemindersAppStack.self),
                                                 "createTime": FieldType(),
-                                                "updateTime": FieldType(),
-                                                "petDetails": FieldType(),
-                                                "petsRemAppStack": FieldType()]
+                                                "updateTime": FieldType()]
 
 }
 

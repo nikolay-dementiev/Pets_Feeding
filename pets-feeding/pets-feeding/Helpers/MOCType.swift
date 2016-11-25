@@ -16,8 +16,12 @@ public enum FieldType<T> {
     case someVal(T)
     case none
 
-    init(_ value: T) {
-        self = .someVal(value)
+    init(_ value: T?) {
+        if value == nil {
+            self = .none
+        } else {
+            self = .someVal(value!)
+        }
     }
 
     init() {

@@ -18,7 +18,7 @@ protocol MOCProtocol {
 
     static var nameOfCoreDataEntity: String {get}
     static var fields:TypeOfMOCFields {get set}
-//    static var fieldsOfClass:TypeOfMOCFields {get set}
+    static var countOfItemInEntity: Int {get}
 
     func itemDesctiption() -> String
     func rewriteItemWithParameters (storage:StorageManager?,
@@ -36,14 +36,10 @@ protocol MOCProtocol {
 
 extension MOCProtocol where Self: NSManagedObject {
 
-//    static var fields: TypeOfMOCFields {
-//        get {
-//            return Self.fieldsOfClass
-//        }
-//        set {
-//            Self.fieldsOfClass = newValue
-//        }
-//    }
+
+    static var countOfItemInEntity: Int {
+        return getItems(predicate: nil)?.count ?? 0
+    }
 
     static func getStorageManager (_ storage:StorageManager?) -> StorageManager {
         return  storage ?? StorageManager.getSharedStorageManager(nameOfCoreDataEntity)
@@ -73,7 +69,6 @@ extension MOCProtocol where Self: NSManagedObject {
 
         return array
     }
-
 
     func rewriteItemWithParameters (storage: StorageManager?,
                                     data dataForObject: TypeOfMOCFields,

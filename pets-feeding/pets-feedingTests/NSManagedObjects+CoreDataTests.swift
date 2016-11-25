@@ -39,7 +39,7 @@ class NSManagedObjects_CoreDataTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testNSManagerObjeccts() {
+    func testNSManagerObjects() {
 
         let initCount = UsedInAppPets.getItems(predicate: nil)?.count ?? 0
 

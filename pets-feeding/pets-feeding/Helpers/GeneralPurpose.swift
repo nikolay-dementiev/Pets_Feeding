@@ -18,9 +18,16 @@ struct GeneralPurpose {
 
     static let dictionaryOfEntityName: [String: String] = [
         //DataBaseNameFromDatabaseName
-        "PetsFeeding":arrayOfUsetDatabaseName[0],
+        "PetsFeeding": arrayOfUsetDatabaseName[0],
 
         //DataBaseNameFromInstanceName
-        UsedInAppPets.nameOfCoreDataEntity:arrayOfUsetDatabaseName[0]]
+        UsedInAppPets.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0],
+        PetDetails.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0],
+        RSTimesPerDay.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0],
+        RemindersAppStack.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0],
+        ReminderSet.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0],
+        PetPhoto.nameOfCoreDataEntity: arrayOfUsetDatabaseName[0]
+
+    ]
     
 }

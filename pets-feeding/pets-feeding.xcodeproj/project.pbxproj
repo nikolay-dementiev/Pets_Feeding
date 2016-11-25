@@ -18,6 +18,11 @@
 		E70B604B1DA5445000CE3647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70B60491DA5445000CE3647 /* LaunchScreen.storyboard */; };
 		E70B60611DA5445000CE3647 /* pets_feedingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */; };
 		E723A7DF1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */; };
+		E77375E61DE8A52300681267 /* MOCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77375E51DE8A52300681267 /* MOCProtocol.swift */; };
+		E77375E81DE8A56700681267 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77375E71DE8A56700681267 /* StorageManager.swift */; };
+		E77375EC1DE8A69300681267 /* ImageWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77375EB1DE8A69300681267 /* ImageWork.swift */; };
+		E77375EE1DE8B65C00681267 /* PhotoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77375ED1DE8B65C00681267 /* PhotoCategory.swift */; };
+		E77375F01DE8B9C800681267 /* DayCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77375EF1DE8B9C800681267 /* DayCategory.swift */; };
 		E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */; };
 		E778DAF21DABC07400BE292D /* StartScreenVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */; };
 		E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */; };
@@ -35,13 +40,11 @@
 		E7B9E7FF1DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */; };
 		E7B9E8001DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */; };
 		E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */; };
-		E7B9E8031DD0A1AC008D4C58 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */; };
 		E7B9E8071DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8061DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift */; };
 		E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */; };
 		E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */; };
 		E7B9E80E1DD1E315008D4C58 /* DateTimeEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */; };
 		E7B9E8441DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */; };
-		E7B9E8461DD60A13008D4C58 /* MOCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */; };
 		E7B9E8481DD62B78008D4C58 /* MOCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B9E8471DD62B78008D4C58 /* MOCType.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,11 @@
 		E70B60601DA5445000CE3647 /* pets_feedingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pets_feedingUITests.swift; sourceTree = "<group>"; };
 		E70B60621DA5445000CE3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E723A7DE1DB7BA2A0082FAF6 /* PetsFeeding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetsFeeding.xcdatamodel; sourceTree = "<group>"; };
+		E77375E51DE8A52300681267 /* MOCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCProtocol.swift; sourceTree = "<group>"; };
+		E77375E71DE8A56700681267 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E77375EB1DE8A69300681267 /* ImageWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWork.swift; sourceTree = "<group>"; };
+		E77375ED1DE8B65C00681267 /* PhotoCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCategory.swift; sourceTree = "<group>"; };
+		E77375EF1DE8B9C800681267 /* DayCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCategory.swift; sourceTree = "<group>"; };
 		E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E778DAF11DABC07400BE292D /* StartScreenVMTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVMTests.swift; sourceTree = "<group>"; };
 		E778DAF31DABC9BC00BE292D /* StartScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
@@ -97,13 +105,11 @@
 		E7B9E7F31DD09E25008D4C58 /* RSTimesPerDay+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSTimesPerDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsedInAppPets+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		E7B9E8061DD0B10C008D4C58 /* CoreDataManage+UtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManage+UtilTests.swift"; sourceTree = "<group>"; };
 		E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		E7B9E80B1DD0B9D1008D4C58 /* GeneralPurpose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPurpose.swift; sourceTree = "<group>"; };
 		E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeEx.swift; sourceTree = "<group>"; };
 		E7B9E8431DD4C1E4008D4C58 /* NSManagedObjects+CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjects+CoreDataTests.swift"; sourceTree = "<group>"; };
-		E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCProtocol.swift; sourceTree = "<group>"; };
 		E7B9E8471DD62B78008D4C58 /* MOCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +196,7 @@
 		E70B606E1DA5453800CE3647 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E77375EA1DE8A65B00681267 /* ImageWork */,
 				E7B9E80D1DD1E315008D4C58 /* DateTimeEx.swift */,
 				E778DAF71DAE8DEB00BE292D /* StartPoint.swift */,
 				E778DAEF1DA801C900BE292D /* UIViewExtensions.swift */,
@@ -243,7 +250,8 @@
 			children = (
 				E723A7FC1DB7BEBC0082FAF6 /* ManagedObject+Properties */,
 				E723A7DD1DB7BA290082FAF6 /* PetsFeeding.xcdatamodeld */,
-				E7B9E8021DD0A1AC008D4C58 /* StorageManager.swift */,
+				E77375ED1DE8B65C00681267 /* PhotoCategory.swift */,
+				E77375EF1DE8B9C800681267 /* DayCategory.swift */,
 			);
 			path = CoreDataEntities;
 			sourceTree = "<group>";
@@ -263,15 +271,24 @@
 				E7B9E7EB1DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift */,
 				E7B9E7F41DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift */,
 				E7B9E7F51DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift */,
-				E7B9E8451DD60A13008D4C58 /* MOCProtocol.swift */,
 			);
 			path = "ManagedObject+Properties";
+			sourceTree = "<group>";
+		};
+		E77375EA1DE8A65B00681267 /* ImageWork */ = {
+			isa = PBXGroup;
+			children = (
+				E77375EB1DE8A69300681267 /* ImageWork.swift */,
+			);
+			path = ImageWork;
 			sourceTree = "<group>";
 		};
 		E7B9E8081DD0B1F2008D4C58 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				E77375E71DE8A56700681267 /* StorageManager.swift */,
 				E7B9E8091DD0B1F2008D4C58 /* StorageUtil.swift */,
+				E77375E51DE8A52300681267 /* MOCProtocol.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -415,14 +432,17 @@
 				E7B9E7FB1DD09E25008D4C58 /* RemindersAppStack+CoreDataProperties.swift in Sources */,
 				E7B9E7F81DD09E25008D4C58 /* Photo+CoreDataClass.swift in Sources */,
 				E7B9E80C1DD0B9D1008D4C58 /* GeneralPurpose.swift in Sources */,
+				E77375E81DE8A56700681267 /* StorageManager.swift in Sources */,
 				E7B9E8001DD09E25008D4C58 /* UsedInAppPets+CoreDataClass.swift in Sources */,
 				E7B9E7FC1DD09E25008D4C58 /* ReminderSet+CoreDataClass.swift in Sources */,
+				E77375F01DE8B9C800681267 /* DayCategory.swift in Sources */,
 				E7B9E7FA1DD09E25008D4C58 /* RemindersAppStack+CoreDataClass.swift in Sources */,
 				E7057FF71DAFC0F700275683 /* MainScreenVC.swift in Sources */,
 				E7057FF91DB0F54300275683 /* MainTabBarVC.swift in Sources */,
 				E70B60401DA5444F00CE3647 /* ViewController.swift in Sources */,
+				E77375EE1DE8B65C00681267 /* PhotoCategory.swift in Sources */,
+				E77375E61DE8A52300681267 /* MOCProtocol.swift in Sources */,
 				E7B9E80A1DD0B1F2008D4C58 /* StorageUtil.swift in Sources */,
-				E7B9E8031DD0A1AC008D4C58 /* StorageManager.swift in Sources */,
 				E778DAF01DA801C900BE292D /* UIViewExtensions.swift in Sources */,
 				E7057FFB1DB103FD00275683 /* MainTableVC.swift in Sources */,
 				E70B603E1DA5444F00CE3647 /* AppDelegate.swift in Sources */,
@@ -431,13 +451,13 @@
 				E7B9E7FE1DD09E25008D4C58 /* RSTimesPerDay+CoreDataClass.swift in Sources */,
 				E778DAF61DABC9D900BE292D /* StartScreenVM.swift in Sources */,
 				E7B9E8011DD09E25008D4C58 /* UsedInAppPets+CoreDataProperties.swift in Sources */,
-				E7B9E8461DD60A13008D4C58 /* MOCProtocol.swift in Sources */,
 				E778DAF81DAE8DEB00BE292D /* StartPoint.swift in Sources */,
 				E7057FF51DAFC0B100275683 /* MainScreenVM.swift in Sources */,
 				E778DAF41DABC9BC00BE292D /* StartScreenVC.swift in Sources */,
 				E7B9E7F71DD09E25008D4C58 /* PetDetails+CoreDataProperties.swift in Sources */,
 				E7B9E7F91DD09E25008D4C58 /* Photo+CoreDataProperties.swift in Sources */,
 				E7B9E7F61DD09E25008D4C58 /* PetDetails+CoreDataClass.swift in Sources */,
+				E77375EC1DE8A69300681267 /* ImageWork.swift in Sources */,
 				E7B9E8481DD62B78008D4C58 /* MOCType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

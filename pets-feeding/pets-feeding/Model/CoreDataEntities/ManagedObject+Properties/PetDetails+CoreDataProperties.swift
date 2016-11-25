@@ -16,27 +16,27 @@ extension PetDetails {
         return NSFetchRequest<PetDetails>(entityName: "PetDetails");
     }
 
-    @NSManaged public var createTime: NSDate?
-    @NSManaged public var updateTime: NSDate?
     @NSManaged public var pet: UsedInAppPets?
     @NSManaged public var petRS: ReminderSet?
-    @NSManaged public var photo: NSSet?
+    @NSManaged public var petPhoto: PetPhoto?
+    @NSManaged public var createTime: NSDate?
+    @NSManaged public var updateTime: NSDate?
 
 }
 
 // MARK: Generated accessors for photo
 extension PetDetails {
 
-    @objc(addPhotoObject:)
-    @NSManaged public func addToPhoto(_ value: Photo)
+    @objc(addPetPhotoObject:)
+    @NSManaged public func addToPetPhoto(_ value: PetPhoto)
 
     @objc(removePhotoObject:)
-    @NSManaged public func removeFromPhoto(_ value: Photo)
+    @NSManaged public func removeFromPetPhoto(_ value: PetPhoto)
 
-    @objc(addPhoto:)
-    @NSManaged public func addToPhoto(_ values: NSSet)
+    @objc(addPetPhoto:)
+    @NSManaged public func addToPetPhoto(_ values: NSSet)
 
-    @objc(removePhoto:)
-    @NSManaged public func removeFromPhoto(_ values: NSSet)
+    @objc(removePetPhoto:)
+    @NSManaged public func removeFromPetPhoto(_ values: NSSet)
 
 }

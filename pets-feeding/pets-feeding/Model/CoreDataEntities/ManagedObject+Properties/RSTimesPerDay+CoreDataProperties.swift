@@ -17,10 +17,18 @@ extension RSTimesPerDay {
     }
 
     @NSManaged public var active: Bool
-    @NSManaged public var createTime: NSDate?
     @NSManaged public var dayCategory: Int16
     @NSManaged public var timeScheduledOn: NSDate?
-    @NSManaged public var updateTime: NSDate?
     @NSManaged public var reminderSet: ReminderSet?
+    @NSManaged public var createTime: NSDate?
+    @NSManaged public var updateTime: NSDate?
 
+}
+
+extension RSTimesPerDay {
+    //http://stackoverflow.com/a/26900521/6643923
+    var stateDayCategory: DayCategory {
+        get { return DayCategory(rawValue: self.dayCategory) ?? .none}
+        set { self.dayCategory = newValue.rawValue}
+    }
 }

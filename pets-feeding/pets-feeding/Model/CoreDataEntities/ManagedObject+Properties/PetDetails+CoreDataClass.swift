@@ -12,9 +12,9 @@ import CoreData
 
 public class PetDetails: NSManagedObject {
 
-    static var fields:TypeOfMOCFields = ["pet": FieldType(),
-                                         "petRS": FieldType(),
-                                         "photo": FieldType(),
+    static var fields:TypeOfMOCFields = ["pet": FieldType(UsedInAppPets.self),
+                                         "petRS": FieldType(ReminderSet.self),
+                                         "petPhoto": FieldType(PetPhoto.self),
                                          "createTime": FieldType(),
                                          "updateTime": FieldType()]
 }

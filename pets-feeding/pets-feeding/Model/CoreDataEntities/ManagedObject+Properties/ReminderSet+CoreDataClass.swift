@@ -12,4 +12,17 @@ import CoreData
 
 public class ReminderSet: NSManagedObject {
 
+    static var fields:TypeOfMOCFields = ["active": FieldType(false),
+                                         "petDetail": FieldType(PetDetails.self),
+                                         "reminder": FieldType(RemindersAppStack.self),
+                                         "createTime": FieldType(),
+                                         "updateTime": FieldType()]
+}
+
+extension ReminderSet: MOCProtocol {
+
+    static var nameOfCoreDataEntity: String {
+        return "ReminderSet"
+    }
+
 }
